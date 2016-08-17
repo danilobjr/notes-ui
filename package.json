@@ -1,0 +1,19 @@
+{
+  "name": "react-for-beginners-ui-kit",
+  "version": "1.0.0",
+  "description": "UI Kit with React.js components specially made for the app built in React for Beginners course on JS Channel, on YouTube.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danilobjr/react-for-beginners-ui-kit/"
+  },
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "Danilo Barros <danilobjr@gmail.com>",
+  "license": "MIT"
+}
