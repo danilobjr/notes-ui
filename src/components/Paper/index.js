@@ -1,1 +1,1 @@
-export { Paper } from './Paper.jsx';
+export { Paper } from './Paper'

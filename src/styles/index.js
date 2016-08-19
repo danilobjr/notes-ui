@@ -1,1 +1,1 @@
-export { elevation } from './elevation.js'
+export { elevation } from './elevation'

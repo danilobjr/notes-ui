@@ -1,3 +1,3 @@
-export { Card } from './Card.jsx'
-export { CardTitle } from './CardTitle.jsx'
-export { CardBody } from './CardBody.jsx'
+export { Card } from './Card'
+export { CardTitle } from './CardTitle'
+export { CardBody } from './CardBody'
