@@ -1,7 +1,9 @@
 import React from 'react';
-import { Paper } from './../Paper';
+import { Card } from './../Card';
 
-const Test = (props) => <Paper />
+const Test = (props) => (
+    <Card title="Market">dsadsah dlskdjhsa dklasjdh </Card>
+) 
 
 export {
     Test
