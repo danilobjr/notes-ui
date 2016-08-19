@@ -1,10 +1,11 @@
-import React from 'react';
-import { Card } from 'components/Card';
+import React from 'react'
+import { Layout, Card } from 'components'
 
-const Test = (props) => (
-    <Card title="Market">dsadsah dlskdjhsa dklasjdh </Card>
-) 
+const Test = (props) => 
+    <Layout>
+        <Card title="Market">dsadsah dlskdjhsa dklasjdh </Card>
+    </Layout>
 
 export {
     Test
-};
+}
