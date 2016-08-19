@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
-import { elevation } from './../../styles'
+import { elevation } from 'styles'
 
 const defaultStyle = {
     width: '300px',

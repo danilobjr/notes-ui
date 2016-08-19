@@ -1,5 +1,5 @@
 const path = require('path');
-const resolvePath = value => path.resolve(__dirname, value)
+const resolvePath = (value = '') => path.resolve(__dirname, value)
 
 module.exports = {
     entry: resolvePath('src/index.jsx'),
@@ -21,6 +21,11 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
+        root: resolvePath(),
+        alias: {
+            components: 'src/components',
+            styles: 'src/styles'
+        },
+        extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx'],
     }
 }
