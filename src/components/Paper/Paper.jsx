@@ -4,7 +4,7 @@ import { elevation } from 'styles'
 
 const defaultStyle = {
     width: '300px',
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f8f8',
     borderRadius: '4px',
     boxSizing: 'border-box'
 };
