@@ -45,7 +45,7 @@ class Paper extends Component {
         const style = Object.assign({}, defaultStyle, elevation[this.props.elevation]);
 
         return (
-            <div className="paper" style={style}>Paper Component</div>
+            <div className="paper" style={style}>{this.props.children}</div>
         );
     }
 }
