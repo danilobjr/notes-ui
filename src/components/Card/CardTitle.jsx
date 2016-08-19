@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 
 const defaultStyle = {
     padding: '22px'
@@ -12,4 +12,4 @@ CardTitle.propTypes = {
 
 export {
     CardTitle
-};
+}

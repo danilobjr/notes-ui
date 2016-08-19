@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Paper } from './../Paper';
-import { CardTitle, CardBody } from './index.js';
+import React, { Component } from 'react'
+import { Paper } from './../Paper'
+import { CardTitle, CardBody } from './index.js'
 
 class Card extends Component {
     render() {
@@ -9,10 +9,10 @@ class Card extends Component {
                  <CardTitle>Title</CardTitle>
                  <CardBody>dsadhas dlskajdh asldkjsha aldkasjdh askadjhas ldkasjdhas ldkjasdl askjhd</CardBody>
              </Paper>
-        );
+        )
     }
 }
 
 export {
     Card
-};
+}
