@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Paper } from 'components/Paper'
-import { CardTitle, CardBody } from 'components/Card'
+import { Paper, CardTitle, CardBody } from 'components'
 
 class Card extends Component {
     render() {
