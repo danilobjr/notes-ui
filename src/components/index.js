@@ -1,4 +1,4 @@
-export { Card, CardTitle, CardBody } from './Card'
+export { Card, CardTitle, CardBody, CardImage } from './Card'
 export { Layout } from './Layout'
-export { Paper } from './Paper'
+export { Paper, PaperBackground } from './Paper'
 export { Test } from './Test'

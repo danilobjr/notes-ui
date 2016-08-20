@@ -3,18 +3,23 @@ import { colors } from 'styles'
 import { propTypes } from 'utils'
 
 const defaultStyle = {
-    padding: '22px',
-    margin: 0,
-    fontSize: '22px',
-    fontWeight: 400,
-    lineHeight: '22px'
+    base: {
+        padding: '22px',
+        margin: 0,
+        fontSize: '22px',
+        fontWeight: 400,
+        lineHeight: '22px'
+    },
+    noColor: {
+        paddingBottom: 0
+    }
 };
 
 const CardTitle = (props) => {
-    const style = Object.assign({}, defaultStyle, {
+    const style = Object.assign({}, defaultStyle.base, {
         color: props.fontColor,
         backgroundColor: props.bgColor || 'transparent'
-    });
+    }, !props.bgColor ? defaultStyle.noColor : {});
 
     return (
         <h2 style={style}>{props.children}</h2>

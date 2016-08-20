@@ -1,43 +1,50 @@
 import React, { Component, PropTypes } from 'react'
-import { Paper, CardTitle, CardBody } from 'components'
+import { Paper, CardTitle, CardBody, CardImage } from 'components'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
 class Card extends Component {
     render() {
-        const { background, elevation } = this.props;
+        const { elevation } = this.props;
 
         return (
-             <Paper elevation={elevation} background={background}>
+             <Paper elevation={elevation}>
+                 {this.renderImage()}
                  {this.renderTitle()}
                  <CardBody>dsadhas dlskajdh asldkjsha aldkasjdh askadjhas ldkasjdhas ldkjasdl askjhd</CardBody>
              </Paper>
         )
     }
 
+    renderImage () {
+        const { image } = this.props;
+
+        if (!image) {
+            return null;
+        }
+
+        return (
+            <CardImage url={this.props.image} />
+        );
+    }
+
     renderTitle () {
-        const { title, color, background } = this.props;
+        const { title, color } = this.props;
 
         if (!title) {
             return null;
         }
 
-        let bgColor;
-
-        if (!background && color) {
-            bgColor = color;
-        }
-
         const fontColor = color ? colors.font.white : colors.font.gray;
 
-        return <CardTitle fontColor={fontColor} bgColor={bgColor}>{title}</CardTitle>;
+        return <CardTitle fontColor={fontColor} bgColor={color}>{title}</CardTitle>;
     }
 }
 
 Card.propTypes = {
     title: PropTypes.string,
     color: propTypes.backgroundColors,
-    background: PropTypes.string,
+    image: PropTypes.string,
     elevation: propTypes.elevation
 };
 

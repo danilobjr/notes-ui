@@ -7,7 +7,7 @@ const Test = (props) =>
         <Card
             title="UI Design Tools"
             color={colors.background.blue}
-            background="http://www.carlsbad-convention.cz/images/gastronomie/04.jpg"
+            image="http://www.carlsbad-convention.cz/images/gastronomie/04.jpg"
             elevation={2}
         >
             dsadsah dlskdjhsa dklasjdh 
