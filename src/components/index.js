@@ -1,4 +1,5 @@
 export { Card, CardTitle, CardBody, CardImage } from './Card'
+export { Checkbox } from './Checkbox'
 export { Layout } from './Layout'
 export { Paper, PaperBackground } from './Paper'
 export { Test } from './Test'

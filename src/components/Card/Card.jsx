@@ -5,13 +5,13 @@ import { propTypes } from 'utils'
 
 class Card extends Component {
     render() {
-        const { elevation } = this.props;
+        const { elevation, children } = this.props;
 
         return (
              <Paper elevation={elevation}>
                  {this.renderImage()}
                  {this.renderTitle()}
-                 <CardBody>dsadhas dlskajdh asldkjsha aldkasjdh askadjhas ldkasjdhas ldkjasdl askjhd</CardBody>
+                 <CardBody>{children}</CardBody>
              </Paper>
         )
     }
