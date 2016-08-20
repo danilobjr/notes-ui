@@ -3,6 +3,7 @@ import React from 'react'
 const defaultStyle = {
     width: '100vw',
     height: '100vh',
+    padding: '50px',
     backgroundColor: '#ececec'
 };
 

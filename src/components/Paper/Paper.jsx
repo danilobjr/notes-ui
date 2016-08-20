@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { elevation } from 'styles'
+import { propTypes } from 'utils'
 
 const defaultStyle = {
     width: '300px',
     backgroundColor: '#f8f8f8',
     borderRadius: '4px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    overflow: 'hidden'
 };
 
 @Radium
@@ -21,7 +23,7 @@ class Paper extends Component {
 }
 
 Paper.propTypes = {
-    elevation: PropTypes.oneOf([0,1,2,3,4,5])
+    elevation: propTypes.elevation
 };
 
 Paper.defaultProps = {
