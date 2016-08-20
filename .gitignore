@@ -4,6 +4,7 @@ npm-debug.log
 
 # vim
 *.swp
+*.swo
 
 # app
 build/bundle.js
