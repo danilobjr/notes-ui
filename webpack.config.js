@@ -24,7 +24,8 @@ module.exports = {
         root: resolvePath(),
         alias: {
             components: 'src/components',
-            styles: 'src/styles'
+            styles: 'src/styles',
+            utils: 'src/utils'
         },
         extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx'],
     }
