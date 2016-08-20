@@ -4,21 +4,26 @@ import { PaperBackground } from 'components'
 import { elevation } from 'styles'
 import { propTypes } from 'utils'
 
-const defaultStyle = {
-    width: '300px',
-    backgroundColor: '#f8f8f8',
-    borderRadius: '4px',
-    boxSizing: 'border-box',
-    overflow: 'hidden'
+const style = {
+    base: {
+        width: '300px',
+        backgroundColor: '#f8f8f8',
+        borderRadius: '4px',
+        boxSizing: 'border-box',
+        overflow: 'hidden'
+    }
 };
+
+const getStyle = (style, props) => ([
+    style.base,
+    props.elevation && elevation[props.elevation]
+])
 
 @Radium
 class Paper extends Component {
     render() {
-        const style = Object.assign({}, defaultStyle, elevation[this.props.elevation]);
-
         return (
-            <div style={style}>
+            <div style={getStyle(style, this.props)}>
                 {this.props.children}
             </div>
         );

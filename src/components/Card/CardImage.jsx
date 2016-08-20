@@ -1,22 +1,25 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-const defaultStyle = {
-    height: '195px',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    filter: 'brightness(.9)'
+const style = {
+    base: {
+        height: '195px',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        filter: 'brightness(.9)'
+    }
 };
+
+const getStyle = (style, props) => ([
+    style.base,
+    { backgroundImage: `url(${props.url})` }
+])
 
 @Radium
 class CardImage extends Component {
     render() {
-        const style = Object.assign({}, defaultStyle, {
-            backgroundImage: `url(${this.props.url})`
-        });
-
         return (
-                <div style={style}></div>
+            <div style={getStyle(style, this.props)}></div>
         );
     }
 }

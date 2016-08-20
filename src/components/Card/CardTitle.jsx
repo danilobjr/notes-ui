@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
-const defaultStyle = {
+const style = {
     base: {
         padding: '22px',
         margin: 0,
@@ -15,15 +16,22 @@ const defaultStyle = {
     }
 };
 
-const CardTitle = (props) => {
-    const style = Object.assign({}, defaultStyle.base, {
+const getStyle = (style, props) => ([
+    style.base,
+    !props.bgColor && style.noColor,
+    {
         color: props.fontColor,
         backgroundColor: props.bgColor || 'transparent'
-    }, !props.bgColor ? defaultStyle.noColor : {});
+    }
+])
 
-    return (
-        <h2 style={style}>{props.children}</h2>
-    );
+@Radium
+class CardTitle extends Component {
+    render() {
+        return (
+            <h2 style={getStyle(style, this.props)}>{this.props.children}</h2>
+        );
+    }
 }
 
 CardTitle.propTypes = {
