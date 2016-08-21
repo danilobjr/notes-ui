@@ -15,7 +15,7 @@ module.exports = {
                 loader: 'babel',
                 query: {
                     presets: ['es2015', 'react'],
-                    plugins: ['transform-decorators-legacy']
+                    plugins: ['transform-decorators-legacy', 'transform-object-rest-spread']
                 }
             }
         ]
