@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { PaperBackground } from 'components'
-import { elevation } from 'styles'
+import { colors, elevation } from 'styles'
 import { propTypes } from 'utils'
 
 const style = {
     base: {
         width: '300px',
-        backgroundColor: '#f8f8f8',
+        backgroundColor: colors.background.white,
         borderRadius: '4px',
         boxSizing: 'border-box',
         overflow: 'hidden'
