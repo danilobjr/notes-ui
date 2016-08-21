@@ -11,17 +11,17 @@ const style = {
         fontWeight: 400,
         lineHeight: '22px'
     },
-    noColor: {
+    noPaddingBottom: {
         paddingBottom: 0
     }
 };
 
 const getStyle = (style, props) => ([
     style.base,
-    !props.bgColor && style.noColor,
+    props.bgColor === colors.background.white && style.noPaddingBottom,
     {
         color: props.fontColor,
-        backgroundColor: props.bgColor || 'transparent'
+        backgroundColor: props.bgColor
     }
 ])
 
@@ -42,7 +42,8 @@ CardTitle.propTypes = {
 
 CardTitle.defaultProps = {
     children: 'Title',
-    fontColor: colors.font.gray
+    fontColor: colors.font.gray,
+    bgColor: colors.background.white
 };
 
 export {
