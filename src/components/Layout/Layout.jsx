@@ -5,6 +5,7 @@ const style = {
         width: '100vw',
         height: '100vh',
         padding: '50px',
+        boxSizing: 'border-box',
         backgroundColor: '#ececec'
     }
 };
