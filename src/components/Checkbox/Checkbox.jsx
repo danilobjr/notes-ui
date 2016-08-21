@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { CheckboxInput } from 'components'
 
-const style = {
+const componentStyle = {
     base: {
         display: 'flex',
         alignItems: 'center'
@@ -21,8 +21,14 @@ class Checkbox extends Component {
     }
 
     render() {
+        const { className, style, ...others } = this.props;
+
         return (
-            <div style={style.base} onClick={this.handleClick.bind(this)}>
+            <div
+                className={className}
+                style={[componentStyle.base, style]}
+                onClick={this.handleClick.bind(this)} {...others}
+            >
                 <CheckboxInput checked={this.state.checked} />
                 {this.renderChildren()}
             </div>
