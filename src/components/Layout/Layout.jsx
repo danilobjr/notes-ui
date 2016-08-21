@@ -5,6 +5,8 @@ const style = {
         width: '100vw',
         height: '100vh',
         padding: '50px',
+        fontFamily: 'Roboto, sans-serif, helvetica',
+        fontSize: '18px',
         boxSizing: 'border-box',
         backgroundColor: '#ececec'
     }
