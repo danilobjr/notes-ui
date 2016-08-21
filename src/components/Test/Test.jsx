@@ -10,7 +10,7 @@ const Test = (props) =>
             image="http://www.carlsbad-convention.cz/images/gastronomie/04.jpg"
             elevation={2}
         >
-            <Checkbox label="Photoshop" />
+            <Checkbox>Photoshop</Checkbox>
         </Card>
     </Layout>
 

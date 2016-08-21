@@ -6,11 +6,6 @@ const style = {
     base: {
         display: 'flex',
         alignItems: 'center'
-    },
-    label: {
-        base: {
-            color: 'gray'
-        }
     }
 };
 
@@ -29,21 +24,13 @@ class Checkbox extends Component {
         return (
             <div style={style.base} onClick={this.handleClick.bind(this)}>
                 <CheckboxInput checked={this.state.checked} />
-                {this.renderLabel()}
+                {this.renderChildren()}
             </div>
         );
     }
 
-    renderLabel () {
-        const { label } = this.props;
-
-        if (!label) {
-            return null;
-        }
-
-        return (
-            <div style={style.label.base}>{label}</div>
-        );
+    renderChildren () {
+        return this.props.children || null;
     }
 
     handleClick() {
@@ -52,7 +39,7 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-    label: PropTypes.string
+    children: PropTypes.string
 };
 
 export {
