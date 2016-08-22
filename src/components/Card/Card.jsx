@@ -1,18 +1,22 @@
 import React, { Component, PropTypes } from 'react'
+import Radium from 'radium'
 import { Paper, CardTitle, CardBody, CardImage } from 'components'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
 const componentStyle = {
-    borderRadius: '4px'
+    base: {
+        borderRadius: '4px'
+    }
 };
 
+@Radium
 class Card extends Component {
     render() {
-        const { elevation, children } = this.props;
+        const { elevation, style, children } = this.props;
 
         return (
-             <Paper style={componentStyle} elevation={elevation}>
+             <Paper style={[componentStyle.base, style]} elevation={elevation}>
                  {this.renderImage()}
                  {this.renderTitle()}
                  <CardBody>{children}</CardBody>
