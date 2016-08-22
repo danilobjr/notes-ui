@@ -22,6 +22,7 @@ const componentStyle = {
         }
     },
     flat: {
+        fontWeight: '300',
         backgroundColor: 'transparent',
         boxShadow: 'none'
     }
