@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
+import { colors } from 'styles'
 
 const style = {
     input: {
@@ -21,8 +22,8 @@ const style = {
         },
         inputChecked: {
             display: 'block',
-            borderBottom: '2px solid rgb(184, 184, 184)',
-            borderLeft: '2px solid rgb(184, 184, 184)',
+            borderBottom: `2px solid ${colors.font.lightGray}`,
+            borderLeft: `2px solid ${colors.font.lightGray}`,
             borderTop: 'none',
             borderRight: 'none',
             width: '13px',
