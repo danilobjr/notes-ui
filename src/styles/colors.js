@@ -1,7 +1,8 @@
 const colors = {
     font: {
         white: '#f8f8f8',
-        gray: '#727272'
+        gray: '#727272',
+        lightGray: '#b8b8b8'
     },
     background: {
         white: '#f8f8f8',
