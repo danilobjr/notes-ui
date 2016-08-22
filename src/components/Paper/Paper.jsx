@@ -4,7 +4,7 @@ import { PaperBackground } from 'components'
 import { colors, elevation } from 'styles'
 import { propTypes } from 'utils'
 
-const style = {
+const componentStyle = {
     base: {
         width: '300px',
         backgroundColor: colors.background.white,
@@ -16,14 +16,20 @@ const style = {
 
 const getStyle = (style, props) => ([
     style.base,
-    props.elevation && elevation[props.elevation]
+    props.elevation && elevation[props.elevation],
+    props.style
 ])
 
 @Radium
 class Paper extends Component {
     render() {
+        const { style, elevation, ...others } = this.props;
+            
         return (
-            <div style={getStyle(style, this.props)}>
+            <div
+                style={getStyle(componentStyle, this.props)}
+                {...others}
+            >
                 {this.props.children}
             </div>
         );
