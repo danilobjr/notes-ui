@@ -1,9 +1,11 @@
 import React from 'react'
-import { Layout, Card, Checkbox, FloatingInput, IconSearch } from 'components'
+import { Layout, Button, Card, Checkbox, FloatingInput, IconSearch } from 'components'
 import { colors } from 'styles'
 
 const Test = (props) => 
     <Layout>
+        <Button style={{ marginBottom: '50px' }} onClick={() => console.log('Save clicked')}>Save</Button>
+
         <FloatingInput
             style={{ 
                 width: '296px',
@@ -14,6 +16,7 @@ const Test = (props) =>
         />
 
         <Card
+            style={{ width: '296px' }}
             title="UI Design Tools"
             color={colors.background.blue}
             image="http://www.carlsbad-convention.cz/images/gastronomie/04.jpg"
