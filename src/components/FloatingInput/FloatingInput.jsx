@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
-import { Paper, IconSearch } from 'components'
+import { Paper } from 'components'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
@@ -21,38 +21,28 @@ const styleComponent = {
             backgroundColor: colors.background.white,
             border: 'none'
         },
-        withIcon: {
-            marginLeft: '14px'
-        },
-        noIcon: {
+        noLeftComponent: {
             marginLeft: '22px'
-        }
-    },
-    icon: {
-        base: {
-            width: '20px',
-            marginLeft: '20px'
         }
     }
 };
 
 const getInputStyle = (style, props) => ([
     style.input.base,
-    props.icon && style.input.withIcon,
-    !props.icon && style.input.noIcon
+    !props.leftComponent && style.input.noLeftComponent
 ])
 
 @Radium
 class FloatingInput extends Component {
     render() {
-        const { style, ...others } = this.props;
+        const { style, leftComponent, ...others } = this.props;
 
         return (
             <Paper
                 style={[styleComponent.base, style]} 
                 {...others}
             >
-                <IconSearch style={styleComponent.icon.base} color={colors.font.lightGray} />
+                {this.renderLeftComponent()}
                 <input
                     style={getInputStyle(styleComponent, this.props)}
                     type="text"
@@ -61,11 +51,22 @@ class FloatingInput extends Component {
             </Paper>
         );
     }
+
+    renderLeftComponent() {
+        const { leftComponent } = this.props;
+
+        if (!leftComponent) {
+            return null;
+        }
+
+        return leftComponent;
+    }
 }
 
 FloatingInput.propTypes = {
+    placeholder: PropTypes.string,
     elevation: propTypes.elevation,
-    placeholder: PropTypes.string
+    leftComponent: PropTypes.element
 };
 
 FloatingInput.defaultProps = {
