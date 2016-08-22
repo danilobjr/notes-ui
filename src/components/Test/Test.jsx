@@ -6,10 +6,17 @@ const Test = (props) =>
     <Layout>
         <Button
             style={{ marginBottom: '50px' }}
-            flat
             onClick={() => console.log('Save clicked')}
         >
             Save
+        </Button>
+
+        <Button
+            style={{ marginBottom: '50px', marginLeft: '10px' }}
+            flat
+            onClick={() => console.log('Cancel clicked')}
+        >
+            Cancel
         </Button>
 
         <FloatingInput
