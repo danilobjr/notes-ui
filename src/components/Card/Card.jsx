@@ -3,12 +3,16 @@ import { Paper, CardTitle, CardBody, CardImage } from 'components'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
+const componentStyle = {
+    borderRadius: '4px'
+};
+
 class Card extends Component {
     render() {
         const { elevation, children } = this.props;
 
         return (
-             <Paper elevation={elevation}>
+             <Paper style={componentStyle} elevation={elevation}>
                  {this.renderImage()}
                  {this.renderTitle()}
                  <CardBody>{children}</CardBody>

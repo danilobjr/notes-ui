@@ -8,7 +8,6 @@ const componentStyle = {
     base: {
         width: '300px',
         backgroundColor: colors.background.white,
-        borderRadius: '4px',
         boxSizing: 'border-box',
         overflow: 'hidden'
     }
