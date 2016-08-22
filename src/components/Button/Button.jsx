@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { Paper } from 'components'
 import { colors } from 'styles'
@@ -14,17 +14,22 @@ const componentStyle = {
         userSelect: 'none',
 
         ':hover': {
-            backgroundColor: '#f0f0f0'
+            backgroundColor: '#e8e8e8'
         },
 
         ':active': {
             backgroundColor: '#d8d8d8'
         }
     },
+    flat: {
+        backgroundColor: 'transparent',
+        boxShadow: 'none'
+    }
 };
 
 const getStyle = (style, props) => ([
     style.base,
+    props.flat && style.flat,
     props.style
 ])
 
@@ -43,6 +48,10 @@ class Button extends Component {
         );
     }
 }
+
+Button.propTypes = {
+    flat: PropTypes.bool
+};
 
 export {
     Button
