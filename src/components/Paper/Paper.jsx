@@ -6,7 +6,6 @@ import { propTypes } from 'utils'
 
 const componentStyle = {
     base: {
-        width: '300px',
         backgroundColor: colors.background.white,
         boxSizing: 'border-box',
         overflow: 'hidden'
