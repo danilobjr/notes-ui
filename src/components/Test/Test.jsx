@@ -1,7 +1,7 @@
 import React from 'react'
 import { 
     Layout, Button, Card, Checkbox, FloatingInput, Icon,
-    IconButton, AppBar
+    IconButton, AppBar, Drawer
 } from 'components'
 import { colors } from 'styles'
 
@@ -42,7 +42,8 @@ class Test extends React.Component {
         super(props);
     
         this.state = {
-            textStyle: {}
+            textStyle: {},
+            menuIsOpen: false
         };
     }
 
@@ -50,9 +51,11 @@ class Test extends React.Component {
         return (
             <div>
                 <Layout style={style.layout}>
-                    <AppBar appTitle="JS Channel Notes" onToggleMenuClick={() => { console.log('menu toggled'); }} />
+                    <AppBar appTitle="JS Channel Notes" onToggleMenuClick={this.toggleMenu.bind(this)} />
                     
                     <div style={style.layoutBody}>
+                        <Drawer open={this.state.menuIsOpen} />
+
                         <FloatingInput
                             style={style.floatingSearch}
                             leftComponent={<Icon name="search" style={{ padding: '0 14px 0 20px' }} color={colors.font.lightGray} />}
@@ -144,6 +147,10 @@ class Test extends React.Component {
 
     setNoStyle() {
         this.setState({ textStyle: {} });
+    }
+
+    toggleMenu() {
+        this.setState({ menuIsOpen: !this.state.menuIsOpen });
     }
 }
 
