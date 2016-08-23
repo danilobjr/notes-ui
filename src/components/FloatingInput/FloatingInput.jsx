@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { Paper } from 'components'
-import { colors } from 'styles'
+import { elevation, colors } from 'styles'
 import { propTypes } from 'utils'
 
 const styleComponent = {
@@ -11,7 +11,9 @@ const styleComponent = {
         height: '54px',
         borderRadius: '27px',
         borderTop: '1px solid white',
-        backgroundColor: colors.background.white
+        backgroundColor: colors.background.white,
+
+        ':focus': elevation['2']
     },
     input: {
         base: {
@@ -68,10 +70,6 @@ FloatingInput.propTypes = {
     placeholder: PropTypes.string,
     elevation: propTypes.elevation,
     leftComponent: PropTypes.element
-};
-
-FloatingInput.defaultProps = {
-    elevation: 2
 };
 
 export {
