@@ -22,11 +22,11 @@ const getStyle = (style, props) => ([
 @Radium
 class IconButton extends Component {
     render() {
-        const { style, ...others } = this.props;
+        const { style, iconName, ...others } = this.props;
 
         return (
             <Button style={getStyle(componentStyle, this.props)} {...others}>
-                <Icon name="search" />
+                <Icon name={iconName} />
             </Button>
         );
     }
