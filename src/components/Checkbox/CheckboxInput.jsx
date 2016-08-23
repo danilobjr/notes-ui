@@ -9,8 +9,7 @@ const style = {
             height: '24px',
             marginRight: '16px',
             border: '1px solid #dfdfdf',
-            borderRadius: '3px',
-            cursor: 'pointer'
+            borderRadius: '3px'
         },
         checked: {
             backgroundColor: '#f0f0f0'

@@ -5,7 +5,12 @@ import { CheckboxInput } from 'components'
 const componentStyle = {
     base: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        userSelect: 'none',
+
+        ':hover': {
+            cursor: 'pointer'
+        }
     }
 };
 
