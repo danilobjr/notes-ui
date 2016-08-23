@@ -7,7 +7,6 @@ const componentStyle = {
     base: {
         display: 'inline-block',
         padding: '10px 16px',
-        marginBottom: '50px',
         backgroundColor: colors.background.white,
         borderRadius: '3px',
         cursor: 'pointer',
