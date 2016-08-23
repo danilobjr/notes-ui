@@ -38,7 +38,12 @@ const Test = (props) =>
             >
                 <Checkbox style={style.checklistItem}>Photoshop</Checkbox>
                 <Checkbox style={style.checklistItem}>Inkscape</Checkbox>
-                <Checkbox>Sketch</Checkbox>
+                <Checkbox
+                    onCheck={() => console.log('checked')}
+                    onUncheck={() => console.log('unchecked')}
+                >
+                    Sketch
+                </Checkbox>
             </Card>
 
             <Card

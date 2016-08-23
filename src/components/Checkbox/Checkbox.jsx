@@ -26,7 +26,7 @@ class Checkbox extends Component {
     }
 
     render() {
-        const { className, style, ...others } = this.props;
+        const { className, style, onCheck, onUncheck, ...others } = this.props;
 
         return (
             <div
@@ -44,13 +44,25 @@ class Checkbox extends Component {
         return this.props.children || null;
     }
 
-    handleClick() {
-        this.setState({ checked: !this.state.checked });
+    handleClick(e) {
+        const { onCheck, onUncheck } = this.props;
+        const { checked } = this.state;
+
+        this.setState({ checked: !checked });
+
+        checked ? onUncheck(e.currentTarget) : onCheck(e.currentTarget);
     }
 }
 
 Checkbox.propTypes = {
-    children: PropTypes.string
+    children: PropTypes.string,
+    onCheck: PropTypes.func,
+    onUncheck: PropTypes.func
+};
+
+Checkbox.defaultProps = {
+    onCheck: () => {},
+    onUncheck: () => {}
 };
 
 export {
