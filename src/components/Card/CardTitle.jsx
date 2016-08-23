@@ -5,7 +5,10 @@ import { propTypes } from 'utils'
 
 const style = {
     base: {
-        padding: '22px',
+        paddingTop: 22,
+        paddingRight: 22,
+        paddingBottom: 22,
+        paddingLeft: 22,
         margin: 0,
         fontSize: '22px',
         fontWeight: 400,
