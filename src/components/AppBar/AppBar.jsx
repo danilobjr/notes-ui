@@ -9,7 +9,8 @@ const componentStyle = {
         width: '100vw',
         minHeight: 64,
         backgroundColor: colors.background.white,
-        alignItems: 'center'
+        alignItems: 'center',
+        zIndex: 10000
     },
     icon: {
         marginLeft: 11
