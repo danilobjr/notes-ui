@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { Paper, CardTitle, CardBody, CardImage } from 'components'
-import { colors } from 'styles'
+import { elevation, colors } from 'styles'
 import { propTypes } from 'utils'
 
 const componentStyle = {
     base: {
-        borderRadius: '4px'
+        borderRadius: '4px',
+
+        ':hover': elevation['2']
     }
 };
 
@@ -54,10 +56,6 @@ Card.propTypes = {
     color: propTypes.backgroundColors,
     image: PropTypes.string,
     elevation: propTypes.elevation
-};
-
-Card.defaultProps = {
-    elevation: 2
 };
 
 export {
