@@ -55,7 +55,6 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-    children: PropTypes.string,
     onCheck: PropTypes.func,
     onUncheck: PropTypes.func
 };
