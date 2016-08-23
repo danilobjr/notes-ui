@@ -6,7 +6,8 @@ import { colors } from 'styles'
 const componentStyle = {
     base: {
         display: 'flex',
-        height: 64,
+        width: '100vw',
+        minHeight: 64,
         backgroundColor: colors.background.white,
         alignItems: 'center'
     },
