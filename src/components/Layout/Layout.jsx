@@ -1,17 +1,18 @@
 import React from 'react'
 
-const style = {
+const componentStyle = {
     base: {
         width: '100vw',
         height: '100vh',
-        padding: '50px',
         boxSizing: 'border-box',
         backgroundColor: '#ececec'
     }
 };
 
+const getStyle = (style, props) => Object.assign({}, style.base, props.style)
+
 const Layout = (props) => 
-    <div style={style.base}>{props.children}</div>
+    <div style={getStyle(componentStyle, props)}>{props.children}</div>
 
 export {
     Layout
