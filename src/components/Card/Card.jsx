@@ -56,6 +56,10 @@ Card.propTypes = {
     elevation: propTypes.elevation
 };
 
+Card.defaultProps = {
+    elevation: 2
+};
+
 export {
     Card
 }
