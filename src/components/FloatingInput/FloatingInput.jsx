@@ -17,6 +17,7 @@ const styleComponent = {
         base: {
             flex: 1,
             paddingBottom: '3px',
+            marginRight: '18px',
             fontWeight: 300,
             backgroundColor: colors.background.white,
             border: 'none'
