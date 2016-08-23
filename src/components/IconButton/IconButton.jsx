@@ -14,10 +14,18 @@ const componentStyle = {
     }
 };
 
+const getStyle = (style, props) => ([
+    style.base,
+    props.style
+])
+
+@Radium
 class IconButton extends Component {
     render() {
+        const { style, ...others } = this.props;
+
         return (
-            <Button style={componentStyle.base} {...this.props}>
+            <Button style={getStyle(componentStyle, this.props)} {...others}>
                 <Icon name="search" />
             </Button>
         );
