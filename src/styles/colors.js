@@ -1,4 +1,6 @@
 const colors = {
+    grayHover: '#e8e8e8',
+    grayActive: '#d8d8d8',
     font: {
         white: '#f8f8f8',
         gray: '#727272',
