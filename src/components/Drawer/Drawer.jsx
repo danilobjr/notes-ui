@@ -4,9 +4,9 @@ import { Paper } from 'components'
 
 const componentStyle = {
     base: {
-        position: 'absolute',
-        left: -296,
-        top: 0,
+        //position: 'absolute',
+        //left: -296,
+        //top: 0,
         width: 296,
         height: '100vh'
     },
