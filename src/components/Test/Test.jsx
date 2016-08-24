@@ -70,7 +70,7 @@ class Test extends React.Component {
                     
                     <div style={style.layoutBody}>
                         <Drawer style={this.getDrawerStyle()}>
-                            <DrawerItem iconName="search" text="Text" onClick={() => console.log('Filter by Notes of type Text')} />
+                            <DrawerItem iconName="file" text="Notes" onClick={() => console.log('Filter by Notes of type Text')} />
                         </Drawer>
 
                         <div style={style.cardsView}>
