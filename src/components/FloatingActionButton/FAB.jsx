@@ -6,7 +6,7 @@ import { elevation, colors } from 'styles'
 
 const componentStyle = {
     base: {
-        position: 'absolute',
+        position: 'fixed',
         width: 56,
         height: 56,
         bottom: 30,
