@@ -13,11 +13,11 @@ const componentStyle = {
         userSelect: 'none',
 
         ':hover': {
-            backgroundColor: '#e8e8e8'
+            backgroundColor: colors.grayHover
         },
 
         ':active': {
-            backgroundColor: '#d8d8d8'
+            backgroundColor: colors.grayActive
         }
     },
     flat: {
