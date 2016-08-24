@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import { IconMenu } from './IconMenu'
+import { IconPlus } from './IconPlus'
 import { IconSearch } from './IconSearch'
 import { colors } from 'styles'
 
 const icons = {
     menu: IconMenu,
+    plus: IconPlus,
     search: IconSearch
 };
 
