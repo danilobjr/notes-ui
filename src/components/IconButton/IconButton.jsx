@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { Button, Icon } from 'components'
+import { colors } from 'styles'
+import { propTypes } from 'utils'
 
 const componentStyle = {
     base: {
@@ -22,18 +24,19 @@ const getStyle = (style, props) => ([
 @Radium
 class IconButton extends Component {
     render() {
-        const { style, iconName, ...others } = this.props;
+        const { style, iconName, iconColor, ...others } = this.props;
 
         return (
             <Button style={getStyle(componentStyle, this.props)} {...others}>
-                <Icon name={iconName} />
+                <Icon name={iconName} color={iconColor} />
             </Button>
         );
     }
 }
 
 IconButton.propTypes = {
-    iconName: PropTypes.string.isRequired
+    iconName: PropTypes.string.isRequired,
+    iconColor: propTypes.fontColors
 };
 
 export {
