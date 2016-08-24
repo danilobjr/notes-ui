@@ -1,7 +1,7 @@
 import React from 'react'
 import { 
     Layout, Button, Card, Checkbox, FloatingInput, Icon,
-    IconButton, AppBar, Drawer, DrawerItem
+    IconButton, AppBar, Drawer, DrawerItem, FAB
 } from 'components'
 import { colors } from 'styles'
 
@@ -142,6 +142,8 @@ class Test extends React.Component {
                             Cancel
                         </Button>
                     </div>
+
+                    <FAB iconName="search" onClick={() => console.log('FAB clicked')} />
                 </Layout>
             </div>
         );
