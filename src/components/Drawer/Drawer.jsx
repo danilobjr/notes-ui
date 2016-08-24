@@ -25,7 +25,9 @@ const getStyle = (style, props) => ([
 class Drawer extends Component {
     render() {
         return (
-            <Paper style={getStyle(componentStyle, this.props)}></Paper>
+            <Paper style={getStyle(componentStyle, this.props)}>
+                {this.props.children}
+            </Paper>
         );
     }
 }
