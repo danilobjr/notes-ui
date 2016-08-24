@@ -1,7 +1,7 @@
 import React from 'react'
 import { 
     Layout, Button, Card, Checkbox, FloatingInput, Icon,
-    IconButton, AppBar, Drawer
+    IconButton, AppBar, Drawer, DrawerItem
 } from 'components'
 import { colors } from 'styles'
 
@@ -14,6 +14,10 @@ const style = {
     },
     layoutBody: {
         padding: 32
+    },
+    drawer: {
+        height: 'calc(100vh - 64px)',
+        top: 64
     },
     floatingSearch: {
         width: 296,
@@ -54,7 +58,9 @@ class Test extends React.Component {
                     <AppBar appTitle="JS Channel Notes" onToggleMenuClick={this.toggleMenu.bind(this)} />
                     
                     <div style={style.layoutBody}>
-                        <Drawer open={this.state.menuIsOpen} />
+                        <Drawer style={style.drawer} open={this.state.menuIsOpen}>
+                            <DrawerItem iconName="search" text="Text" onClick={() => console.log('Filter by Notes of type Text')} />
+                        </Drawer>
 
                         <FloatingInput
                             style={style.floatingSearch}
