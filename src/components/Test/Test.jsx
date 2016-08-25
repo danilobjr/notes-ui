@@ -70,7 +70,8 @@ class Test extends React.Component {
                     
                     <div style={style.layoutBody}>
                         <Drawer style={this.getDrawerStyle()}>
-                            <DrawerItem iconName="file" text="Notes" onClick={() => console.log('Filter by Notes of type Text')} />
+                            <DrawerItem iconName="file" text="Notes" onClick={() => console.log('Notes clicked')} />
+                            <DrawerItem iconName="list" text="Lists" onClick={() => console.log('Lists clicked')} />
                         </Drawer>
 
                         <div style={style.cardsView}>
@@ -129,10 +130,8 @@ class Test extends React.Component {
                                     </Card>
                                 </div>
 
-                                {/*
                                 <IconButton
                                     iconName="search"
-                                    flat
                                     onClick={() => console.log('IconButton clicked')} 
                                 />
                         
@@ -155,7 +154,6 @@ class Test extends React.Component {
                                 >
                                     Cancel
                                 </Button>
-                                */}
                             </div>
                         </div>
                     </div>
