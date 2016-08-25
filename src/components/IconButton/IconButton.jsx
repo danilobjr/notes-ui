@@ -10,7 +10,6 @@ const componentStyle = {
         width: '46px',
         height: '46px',
         padding: 0,
-        backgroundColor: 'transparent',
         borderRadius: '50%',
         alignItems: 'center',
         justifyContent: 'center'
