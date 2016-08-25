@@ -12,12 +12,8 @@ const componentStyle = {
         cursor: 'pointer',
         userSelect: 'none',
 
-        ':hover': {
-            backgroundColor: colors.grayHover
-        },
-
         ':active': {
-            backgroundColor: colors.grayActive
+            backgroundColor: colors.button.active
         }
     },
     flat: {
