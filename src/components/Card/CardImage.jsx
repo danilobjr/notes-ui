@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
-const style = {
+const componentStyle = {
     base: {
         height: '195px',
         backgroundPosition: 'center center',
@@ -18,8 +18,10 @@ const getStyle = (style, props) => ([
 @Radium
 class CardImage extends Component {
     render() {
+        const { style, url, ...others } = this.props;
+
         return (
-            <div style={getStyle(style, this.props)}></div>
+            <div style={getStyle(componentStyle, this.props)} {...others}></div>
         );
     }
 }

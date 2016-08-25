@@ -4,9 +4,6 @@ import { Paper } from 'components'
 
 const componentStyle = {
     base: {
-        //position: 'absolute',
-        //left: -296,
-        //top: 0,
         width: 296,
         height: '100vh'
     },
@@ -24,9 +21,11 @@ const getStyle = (style, props) => ([
 @Radium
 class Drawer extends Component {
     render() {
+        const { style, children, ...others } = this.props;
+
         return (
-            <Paper style={getStyle(componentStyle, this.props)}>
-                {this.props.children}
+            <Paper style={getStyle(componentStyle, this.props)} {...others}>
+                {children}
             </Paper>
         );
     }

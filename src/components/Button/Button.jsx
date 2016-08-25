@@ -36,12 +36,12 @@ const getStyle = (style, props) => ([
 @Radium
 class Button extends Component {
     render() {
-        const { onClick, children } = this.props;
+        const { style, children, flat, ...others } = this.props;
 
         return (
             <Paper
                 style={getStyle(componentStyle, this.props)}
-                onClick={onClick}
+                {...others}
             >
                 {children}
             </Paper>

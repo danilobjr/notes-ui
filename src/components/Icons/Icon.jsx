@@ -23,11 +23,12 @@ const componentStyle = {
 
 class Icon extends Component {
     render() {
-        const { name, style, color } = this.props;
+        const { style, name, color, ...others } = this.props;
 
         return React.createElement(icons[name], { 
             style: Object.assign({}, componentStyle.base, style),
-            color
+            color,
+            ...others
         });    
     }
 }

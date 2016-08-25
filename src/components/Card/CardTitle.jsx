@@ -3,7 +3,7 @@ import Radium from 'radium'
 import { colors } from 'styles'
 import { propTypes } from 'utils'
 
-const style = {
+const componentStyle = {
     base: {
         paddingTop: 22,
         paddingRight: 22,
@@ -31,14 +31,15 @@ const getStyle = (style, props) => ([
 @Radium
 class CardTitle extends Component {
     render() {
+        const { style, fontColor, bgColor, children, ...others } = this.props;
+
         return (
-            <h2 style={getStyle(style, this.props)}>{this.props.children}</h2>
+            <h2 style={getStyle(componentStyle, this.props)} {...others}>{children}</h2>
         );
     }
 }
 
 CardTitle.propTypes = {
-    children: PropTypes.string,
     fontColor: propTypes.fontColors,
     bgColor: propTypes.backgroundColors
 };

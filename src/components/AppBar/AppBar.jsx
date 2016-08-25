@@ -32,10 +32,13 @@ const getStyle = (style, props) => ([
 @Radium
 class AppBar extends Component {
     render() {
+        const { style, appTitle, showToggleMenuButton, 
+            onToggleMenuClick, ...others } = this.props;
+
         return (
-            <Paper style={getStyle(componentStyle, this.props)}>
+            <Paper style={getStyle(componentStyle, this.props)} {...others}>
                 {this.renderToggleMenuButton()}
-                <h1 style={componentStyle.appTitle}>{this.props.appTitle}</h1>
+                <h1 style={componentStyle.appTitle}>{appTitle}</h1>
             </Paper>
         );
     }
@@ -48,8 +51,10 @@ class AppBar extends Component {
         }
 
         return <IconButton
+            className="icon-menu"
             style={componentStyle.icon}
-            iconName="menu" flat
+            iconName="menu" 
+            flat
             onClick={this.handleToggleMenuClick.bind(this)} />;
     }
 

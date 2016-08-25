@@ -11,8 +11,11 @@ const componentStyle = {
 
 const getStyle = (style, props) => Object.assign({}, style.base, props.style)
 
-const Layout = (props) => 
-    <div style={getStyle(componentStyle, props)}>{props.children}</div>
+const Layout = (props) => {
+    const { style, children, ...others } = props;
+
+    return <div style={getStyle(componentStyle, props)}>{children}</div>;
+}
 
 export {
     Layout

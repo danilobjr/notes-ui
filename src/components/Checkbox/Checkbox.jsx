@@ -32,7 +32,8 @@ class Checkbox extends Component {
             <div
                 className={className}
                 style={[componentStyle.base, style]}
-                onClick={this.handleClick.bind(this)} {...others}
+                onClick={this.handleClick.bind(this)} 
+                {...others}
             >
                 <CheckboxInput checked={this.state.checked} />
                 {this.renderChildren()}

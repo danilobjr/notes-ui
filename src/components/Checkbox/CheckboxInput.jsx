@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { colors } from 'styles'
 
-const style = {
+const componentStyle = {
     input: {
         base: {
             width: '24px',
@@ -46,9 +46,11 @@ const getCheckMarkStyle = (style, props) => ([
 @Radium
 class CheckboxInput extends Component {
     render() {
+        const { style, checked, ...others } = this.props;
+
         return (
-            <div style={getInputStyle(style, this.props)}>
-                <div style={getCheckMarkStyle(style, this.props)}></div>
+            <div style={getInputStyle(componentStyle, this.props)} {...others}>
+                <div style={getCheckMarkStyle(componentStyle, this.props)}></div>
             </div>
         );
     }

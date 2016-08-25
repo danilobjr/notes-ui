@@ -36,14 +36,15 @@ const getStyle = (style, props) => ([
 @Radium
 class FAB extends Component {
     render() {
-        const { iconName, iconColor, onClick } = this.props;
+        const { iconName, iconColor, ...others } = this.props;
 
         return (
             <IconButton
                 style={getStyle(componentStyle, this.props)}
                 iconName={iconName}
                 iconColor={iconColor}
-                onClick={onClick} />
+                {...others}
+            />
         );
     }
 }
@@ -51,14 +52,12 @@ class FAB extends Component {
 FAB.propTypes = {
     iconName: PropTypes.string,
     color: PropTypes.string,
-    iconColor: PropTypes.string,
-    onClick: PropTypes.func
+    iconColor: PropTypes.string
 };
 
 FAB.defaultProps = {
     color: color(colors.background.red).darken(.1).rgbString(),
-    iconColor: colors.font.white,
-    onClick: () => {}
+    iconColor: colors.font.white
 };
 
 export {

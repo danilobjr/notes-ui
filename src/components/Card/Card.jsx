@@ -15,10 +15,14 @@ const componentStyle = {
 @Radium
 class Card extends Component {
     render() {
-        const { elevation, style, children } = this.props;
+        const { style, image, elevation, children, ...others } = this.props;
 
         return (
-             <Paper style={[componentStyle.base, style]} elevation={elevation}>
+             <Paper
+                 style={[componentStyle.base, style]}
+                 elevation={elevation}
+                 {...others}
+             >
                  {this.renderImage()}
                  {this.renderTitle()}
                  <CardBody>{children}</CardBody>

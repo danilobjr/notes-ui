@@ -1,6 +1,6 @@
 import React from 'react'
 
-const style = {
+const componentStyle = {
     base: {
         padding: '22px',
         color: '#727272',
@@ -8,7 +8,7 @@ const style = {
     }
 };
 
-const CardBody = (props) => <div style={style.base}>{props.children}</div>
+const CardBody = (props) => <div style={componentStyle.base} {...props}>{props.children}</div>
 
 export {
     CardBody
