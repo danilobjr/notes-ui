@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import { Paper } from 'components'
-import { colors } from 'styles'
+import { elevation, colors } from 'styles'
 
 const componentStyle = {
     base: {
@@ -12,6 +12,8 @@ const componentStyle = {
         cursor: 'pointer',
         userSelect: 'none',
 
+        ':hover': elevation['2'],
+
         ':active': {
             backgroundColor: colors.button.active
         }
@@ -19,7 +21,9 @@ const componentStyle = {
     flat: {
         fontWeight: '300',
         backgroundColor: 'transparent',
-        boxShadow: 'none'
+        boxShadow: 'none',
+
+        ':hover': elevation['0']
     }
 };
 
