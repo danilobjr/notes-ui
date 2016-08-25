@@ -12,11 +12,11 @@ const componentStyle = {
         userSelect: 'none',
 
         ':hover': {
-            backgroundColor: colors.grayHover
+            backgroundColor: colors.drawerItem.hover
         },
 
         ':active': {
-            backgroundColor: colors.grayActive
+            backgroundColor: colors.drawerItem.active
         }
     },
     icon: {
