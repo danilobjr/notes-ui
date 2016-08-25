@@ -1,6 +1,4 @@
 const colors = {
-    grayHover: '#e8e8e8',
-    grayActive: '#d8d8d8',
     font: {
         white: '#f8f8f8',
         gray: '#727272',
@@ -15,6 +13,13 @@ const colors = {
         green: '#80d3d2',
         purple: '#c0a7de',
         gray: '#727272'
+    },
+    button: {
+        active: 'rgba(0,0,0,.1)'
+    },
+    drawerItem: {
+        hover: 'rgba(0,0,0,.05)',
+        active: 'rgba(0,0,0,.1)'
     }
 };
 
