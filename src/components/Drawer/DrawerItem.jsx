@@ -35,8 +35,10 @@ const getStyle = (style, props) => ([
 @Radium
 class DrawerItem extends Component {
     render() {
+        const { style, iconName, text, ...others } = this.props;
+
         return (
-            <div style={getStyle(componentStyle, this.props)}>
+            <div style={getStyle(componentStyle, this.props)} {...others}>
                 {this.renderIcon()}
                 <span style={componentStyle.text}>{this.props.text}</span>
             </div>
