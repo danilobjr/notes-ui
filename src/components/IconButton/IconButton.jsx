@@ -10,6 +10,7 @@ const componentStyle = {
         width: '46px',
         height: '46px',
         padding: 0,
+        backgroundColor: 'transparent',
         borderRadius: '50%',
         alignItems: 'center',
         justifyContent: 'center'
@@ -27,7 +28,11 @@ class IconButton extends Component {
         const { style, iconName, iconColor, ...others } = this.props;
 
         return (
-            <Button style={getStyle(componentStyle, this.props)} {...others}>
+            <Button
+                style={getStyle(componentStyle, this.props)} 
+                flat 
+                {...others}
+            >
                 <Icon name={iconName} color={iconColor} />
             </Button>
         );
