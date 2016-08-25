@@ -6,15 +6,11 @@ const componentStyle = {
     base: {
         width: 296,
         height: '100vh'
-    },
-    open: {
-        left: 0
     }
 };
 
 const getStyle = (style, props) => ([
     style.base,
-    props.open && style.open,
     props.style
 ])
 
@@ -30,14 +26,6 @@ class Drawer extends Component {
         );
     }
 }
-
-Drawer.propTypes = {
-    open: PropTypes.bool
-};
-
-Drawer.defaultProps = {
-    open: false
-};
 
 export {
     Drawer
