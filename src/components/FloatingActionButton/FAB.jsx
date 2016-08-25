@@ -13,27 +13,23 @@ const componentStyle = {
         right: 30,
         boxShadow: '0 6px 16px -5px rgba(0, 0, 0, 0.4)',
 
-        ':hover': Object.assign({}, elevation['2'], {
+        ':hover': {
             boxShadow: '0 10px 26px -7px rgba(0, 0, 0, 0.4)'
-        })
+        }
     }
 };
 
 const setBackgroundColor = bgColor => ({
     backgroundColor: bgColor,
 
-    ':hover': {
-        backgroundColor: bgColor
-    },
-
     ':active': {
-        backgroundColor: color(bgColor).lighten(.1).rgbString()
+        backgroundColor: color(bgColor).lighten(0.2).rgbString()
     }
 })
 
 const getStyle = (style, props) => ([
     style.base,
-    props.color && setBackgroundColor(props.color),
+    setBackgroundColor(props.color),
     props.style
 ])
 
