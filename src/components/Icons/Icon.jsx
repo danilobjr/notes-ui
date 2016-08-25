@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { IconFile } from './IconFile'
+import { IconList } from './IconList'
 import { IconMenu } from './IconMenu'
 import { IconPlus } from './IconPlus'
 import { IconSearch } from './IconSearch'
@@ -7,6 +8,7 @@ import { colors } from 'styles'
 
 const icons = {
     file: IconFile,
+    list: IconList,
     menu: IconMenu,
     plus: IconPlus,
     search: IconSearch
@@ -14,7 +16,8 @@ const icons = {
 
 const componentStyle = {
     base: {
-        width: '20px'
+        width: 20,
+        height: 20
     }
 };
 
