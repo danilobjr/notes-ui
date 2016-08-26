@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Test } from 'components'
+import { DocumentationApp } from './documentation'
 
 const appContainer = document.getElementById('app');
 
-ReactDOM.render(<Test />, appContainer);
+ReactDOM.render(<DocumentationApp />, appContainer);
