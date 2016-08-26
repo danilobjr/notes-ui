@@ -25,7 +25,9 @@ module.exports = {
         alias: {
             components: 'src/components',
             styles: 'src/styles',
-            utils: 'src/utils'
+            utils: 'src/utils',
+            'documentation/common': 'src/documentation/common',
+            'documentation/pages': 'src/documentation/pages'
         },
         extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx'],
     }
