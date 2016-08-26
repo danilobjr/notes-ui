@@ -8,3 +8,4 @@ TODO
 5 - Maybe extract components from Checkbox
 6 - Maybe extract components from DrawerItem
 7 - Maybe extract components from FloatingInput
+8 - Include a left component to AppBar (to be in place instead of default menu-icon button)
