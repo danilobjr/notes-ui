@@ -1,7 +1,13 @@
 import React, { PropTypes } from 'react'
 
+const componentStyle = {
+    base: {
+        fontSize: 36
+    }
+};
+
 const PageHeader = (props) => 
-    <h2>{props.children}</h2>
+    <h2 style={componentStyle.base}>{props.children}</h2>
 
 PageHeader.propTypes = {
     children: PropTypes.string.isRequired

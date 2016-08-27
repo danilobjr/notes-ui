@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Layout, DrawerItem } from 'components'
-import { AppBarPage } from './pages'
+import { ComponentAppBarPage } from './pages'
 
 class DocumentationApp extends Component {
     constructor(props) {
         super(props);
     
         this.state = {
-            currentPage: AppBarPage
+            currentPage: ComponentAppBarPage
         };
     }
 
@@ -25,7 +25,7 @@ class DocumentationApp extends Component {
     }
 
     renderCurrentPage() {
-        return React.createElement(AppBarPage);
+        return React.createElement(ComponentAppBarPage);
     }
 }
 

@@ -12,6 +12,7 @@ const componentStyle = {
 const Page = (props) =>
     <div style={componentStyle.base}>
         <PageHeader>{props.headerText}</PageHeader>
+        <div>{props.children}</div>
     </div>
 
 Page.propTypes = {
