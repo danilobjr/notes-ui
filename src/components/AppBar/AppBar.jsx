@@ -32,27 +32,28 @@ const getStyle = (style, props) => ([
 @Radium
 class AppBar extends Component {
     render() {
-        const { style, appTitle, showToggleDrawerButton, 
-            onToggleDrawerClick, ...others } = this.props;
+        const { style, appTitle, hideToggleDrawerIconButton, 
+            toggleDrawerIconColor, onToggleDrawerClick, ...others } = this.props;
 
         return (
             <Paper style={getStyle(componentStyle, this.props)} {...others}>
-                {this.renderToggleDrawerButton()}
+                {this.renderToggleDrawerIconButton()}
                 <h1 style={componentStyle.appTitle}>{appTitle}</h1>
             </Paper>
         );
     }
 
-    renderToggleDrawerButton() {
-        const { showToggleDrawerButton } = this.props;
+    renderToggleDrawerIconButton() {
+        const { hideToggleDrawerIconButton, toggleDrawerIconColor } = this.props;
 
-        if (!showToggleDrawerButton) {
+        if (hideToggleDrawerIconButton) {
             return null;
         }
 
         return <IconButton
             style={componentStyle.icon}
             iconName="menu" 
+            iconColor={toggleDrawerIconColor}
             flat
             onClick={this.handleToggleDrawerClick.bind(this)} />;
     }
@@ -64,12 +65,12 @@ class AppBar extends Component {
 
 AppBar.propTypes = {
     appTitle: PropTypes.string,
-    showToggleDrawerButton: PropTypes.bool,
+    hideToggleDrawerIconButton: PropTypes.bool,
+    toggleDrawerIconColor: PropTypes.string,
     onToggleDrawerClick: PropTypes.func
 };
 
 AppBar.defaultProps = {
-    showToggleDrawerButton: true,
     onToggleDrawerClick: () => {}
 };
 
