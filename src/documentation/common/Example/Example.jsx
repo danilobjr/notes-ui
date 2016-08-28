@@ -8,6 +8,7 @@ import { ExampleBody } from './ExampleBody'
 
 const componentStyle = {
     base: {
+        marginTop: 20,
         borderRadius: 3
     }
 };
