@@ -3,6 +3,7 @@ import { Page, Paragraph } from 'documentation/common'
 import { PropertiesAppBar } from './PropertiesAppBar'
 import { RawExampleAppBar } from './RawExampleAppBar'
 import { TitleAndClickExampleAppBar } from './TitleAndClickExampleAppBar'
+import { StylingExampleAppBar } from './StylingExampleAppBar'
 
 class ComponentAppBarPage extends Component {
     render() {
@@ -14,6 +15,7 @@ class ComponentAppBarPage extends Component {
 
                 <RawExampleAppBar />
                 <TitleAndClickExampleAppBar />
+                <StylingExampleAppBar />
 
                 <h3>Properties</h3>
 
