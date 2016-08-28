@@ -1,3 +1,4 @@
 export { Example } from './Example'
-export { Paragraph } from './Paragraph'
 export { Page } from './Page'
+export { Paragraph } from './Paragraph'
+export { PropertyTable, Property } from './Properties'
