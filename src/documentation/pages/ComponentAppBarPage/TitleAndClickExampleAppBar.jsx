@@ -15,7 +15,7 @@ export {
 const TitleAndClickExampleAppBar = (props) => 
     <Example
         title="Title and Click"
-        description="dsjadaskdjash daskjahsd"
+        description="You can have a Title and a custom behavior in toggle drawer icon button."
         code={code}
     >
         <AppBar title="Page" onToggleDrawerClick={() => alert('Clicked')} />
