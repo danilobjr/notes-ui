@@ -4,7 +4,7 @@ import { PageHeader } from './PageHeader'
 const componentStyle = {
     base: {
         maxWidth: 1200,
-        padding: 10,
+        padding: '10px 10px 50px',
         margin: '0 auto'
     }
 };
