@@ -9,9 +9,9 @@ const componentStyle = {
 const getStyle = (style, props) => 
     Object.assign({}, style.base, props.style)
 
-const P = (props) => 
+const Paragraph = (props) => 
     <p style={getStyle(componentStyle, props)}>{props.children}</p>
 
 export {
-    P
+    Paragraph
 }

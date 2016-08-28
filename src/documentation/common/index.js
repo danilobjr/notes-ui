@@ -1,3 +1,3 @@
 export { Example } from './Example'
-export { P } from './P'
+export { Paragraph } from './Paragraph'
 export { Page } from './Page'

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { P } from 'documentation/common'
+import { Paragraph } from 'documentation/common'
 
 const componentStyle = {
     base: {
@@ -12,7 +12,7 @@ const componentStyle = {
 
 const ExampleBody = (props) => 
     <div style={componentStyle.base}>
-        <P style={componentStyle.description}>{props.description}</P>
+        <Paragraph style={componentStyle.description}>{props.description}</Paragraph>
         {props.children}
     </div>
 
