@@ -16,7 +16,8 @@ const componentStyle = {
         width: 296
     },
     view: {
-        flex: 1
+        flex: 1,
+        overflowY: 'auto'
     }
 };
 

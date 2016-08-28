@@ -11,7 +11,8 @@ const componentStyle = {
         backgroundColor: '#ececec',
         boxSizing: 'border-box',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
     }
 };
 
