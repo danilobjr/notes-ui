@@ -31,12 +31,12 @@ class Layout extends Component {
     }
 
     render() {
-        const { style, appTitle, drawerItems, children, ...others } = this.props;
+        const { style, title, drawerItems, children, ...others } = this.props;
         const { drawerIsOpen } = this.state;
 
         return (
             <div style={getStyle(componentStyle, this.props)} {...others}>
-                <AppBar appTitle={appTitle} onToggleDrawerClick={this.toggleDrawer.bind(this)} />
+                <AppBar title={title} onToggleDrawerClick={this.toggleDrawer.bind(this)} />
 
                 <LayoutBody
                     drawerItems={drawerItems}
@@ -54,7 +54,7 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-    appTitle: PropTypes.string,
+    title: PropTypes.string,
     drawerItems: PropTypes.arrayOf(PropTypes.element)
 };
 

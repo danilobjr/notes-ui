@@ -14,7 +14,7 @@ class DocumentationApp extends Component {
     render() {
         return (
             <Layout
-                appTitle="JS Channel - UI Kit"
+                title="JS Channel - UI Kit"
                 drawerItems={[
                     <DrawerItem key="1" text="Components" />
                 ]}

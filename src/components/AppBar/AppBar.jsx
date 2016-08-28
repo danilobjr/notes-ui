@@ -15,7 +15,7 @@ const componentStyle = {
     icon: {
         marginLeft: 11
     },
-    appTitle: {
+    title: {
         marginTop: 0,
         marginBottom: 0,
         marginLeft: 11,
@@ -32,7 +32,7 @@ const getStyle = (style, props) => ([
 @Radium
 class AppBar extends Component {
     render() {
-        const { style, appTitle, hideToggleDrawerIconButton, 
+        const { style, title, hideToggleDrawerIconButton, 
             toggleDrawerIconColor, onToggleDrawerClick, ...others } = this.props;
 
         return (
@@ -44,10 +44,10 @@ class AppBar extends Component {
     }
 
     renderTitle () {
-        const { appTitle } = this.props;
+        const { title } = this.props;
 
-        return appTitle
-            ? <h1 style={componentStyle.appTitle}>{appTitle}</h1>
+        return title
+            ? <h1 style={componentStyle.title}>{title}</h1>
             : null;
     }
 
@@ -72,7 +72,7 @@ class AppBar extends Component {
 }
 
 AppBar.propTypes = {
-    appTitle: PropTypes.string,
+    title: PropTypes.string,
     hideToggleDrawerIconButton: PropTypes.bool,
     toggleDrawerIconColor: PropTypes.string,
     onToggleDrawerClick: PropTypes.func
