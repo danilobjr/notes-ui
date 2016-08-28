@@ -10,4 +10,6 @@ TODO
 7 - Maybe extract components from FloatingInput
 8 - Include a left component to AppBar (to be in place instead of default menu-icon button)
 09 - OK - Maybe remove default width: 100vw; of AppBar. Try use width: 100%
-10 - Remove blueish color of RawExampleAppBar
+10 - OK - Remove blueish color of RawExampleAppBar
+11 - DrawerItems must be "nestable"
+12 - Drawer must stay open on documentation
