@@ -1,38 +1,10 @@
 import React from 'react'
-
-const componentStyle = {
-    base: {
-        
-    }
-};
+import { PropertyTable, Property } from 'documentation/common'
 
 const PropertiesAppBar = (props) => 
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Head</th>
-                    <th>Head</th>
-                    <th>Head</th>
-                    <th>Head</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data</td>
-                    <td>Data</td>
-                    <td>Data</td>
-                    <td>Data</td>
-                </tr>
-                <tr>
-                    <td>Data</td>
-                    <td>Data</td>
-                    <td>Data</td>
-                    <td>Data</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <PropertyTable>
+        <Property name="appTitle" type="string" description="Title" />
+    </PropertyTable>
 
 export {
     PropertiesAppBar
