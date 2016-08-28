@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 
 const componentStyle = {
     base: {
+        marginBottom: 18,
         fontSize: 36
     }
 };
