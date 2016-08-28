@@ -2,7 +2,9 @@ const colors = {
     font: {
         white: '#f8f8f8',
         gray: '#727272',
-        lightGray: '#b8b8b8'
+        lightGray: '#b8b8b8',
+        blue: '#3498db',
+        red: '#c0392b'
     },
     background: {
         white: '#f8f8f8',
