@@ -38,9 +38,17 @@ class AppBar extends Component {
         return (
             <Paper style={getStyle(componentStyle, this.props)} {...others}>
                 {this.renderToggleDrawerIconButton()}
-                <h1 style={componentStyle.appTitle}>{appTitle}</h1>
+                {this.renderTitle()}
             </Paper>
         );
+    }
+
+    renderTitle () {
+        const { appTitle } = this.props;
+
+        return appTitle
+            ? <h1 style={componentStyle.appTitle}>{appTitle}</h1>
+            : null;
     }
 
     renderToggleDrawerIconButton() {
