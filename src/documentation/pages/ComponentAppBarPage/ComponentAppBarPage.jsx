@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Page, Paragraph } from 'documentation/common'
 import { PropertiesAppBar } from './PropertiesAppBar'
 import { RawExampleAppBar } from './RawExampleAppBar'
+import { TitleAndClickExampleAppBar } from './TitleAndClickExampleAppBar'
 
 class ComponentAppBarPage extends Component {
     render() {
@@ -12,6 +13,7 @@ class ComponentAppBarPage extends Component {
                 <h3>Examples</h3>
 
                 <RawExampleAppBar />
+                <TitleAndClickExampleAppBar />
 
                 <h3>Properties</h3>
 
