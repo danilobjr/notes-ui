@@ -53,6 +53,10 @@ Button.propTypes = {
     flat: PropTypes.bool
 };
 
+Button.defaultProps = {
+    children: 'Button'
+}
+
 export {
     Button
 }
