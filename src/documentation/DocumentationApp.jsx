@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { AppBar, LayoutBody, DrawerItem } from 'components'
+import { drawerItems } from './drawerItems'
 import { ComponentAppBarPage } from './pages'
 
 const componentStyle = {
@@ -26,9 +27,7 @@ class DocumentationApp extends Component {
                 <AppBar title="JS Channel - UI Kit" hideToggleDrawerIconButton />
                 <LayoutBody
                     drawerIsOpen
-                    drawerItems={[
-                        <DrawerItem key="1" text="Components" />
-                    ]}  
+                    drawerItems={drawerItems}  
                 >
                     {this.renderCurrentPage()}
                 </LayoutBody>
