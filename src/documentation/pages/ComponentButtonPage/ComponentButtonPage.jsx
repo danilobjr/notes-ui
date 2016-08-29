@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Page, TopicHeader, Paragraph } from 'documentation/common'
 import { RawExampleButton } from './RawExampleButton'
+import { FlatExampleButton } from './FlatExampleButton'
 
 class ComponentButtonPage extends Component {
     render() {
@@ -11,6 +12,7 @@ class ComponentButtonPage extends Component {
                 <TopicHeader>Examples</TopicHeader>
 
                 <RawExampleButton />
+                <FlatExampleButton />
 
                 <TopicHeader>Properties</TopicHeader>
             </Page>
