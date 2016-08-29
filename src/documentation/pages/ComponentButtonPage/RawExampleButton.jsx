@@ -14,7 +14,7 @@ const ButtonExample = () =>
 
 const RawExampleButton = (props) => 
     <Example
-        title="Raw example"
+        title="Raw"
         description={description}
         code={code}
     >

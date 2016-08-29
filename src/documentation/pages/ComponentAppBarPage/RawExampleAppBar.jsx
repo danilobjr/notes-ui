@@ -14,7 +14,7 @@ const AppBarExample = () =>
 
 const RawExampleAppBar = (props) => 
     <Example
-        title="Raw example"
+        title="Raw"
         description={description}
         code={code}
     >

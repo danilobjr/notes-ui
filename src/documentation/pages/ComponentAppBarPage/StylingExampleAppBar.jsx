@@ -28,7 +28,7 @@ const AppBarExample = props =>
 
 const StylingExampleAppBar = (props) => 
     <Example
-        title="Styling Example"
+        title="Styling"
         code={code}
         description={description}
     >
