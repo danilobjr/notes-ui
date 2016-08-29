@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { AppBar, LayoutBody, DrawerItem } from 'components'
-import { drawerItems } from './drawerItems'
+import { getDrawerItems } from './drawerItems'
 import { ComponentAppBarPage } from './pages'
 
 const componentStyle = {
@@ -27,7 +27,7 @@ class DocumentationApp extends Component {
                 <AppBar title="JS Channel - UI Kit" hideToggleDrawerIconButton />
                 <LayoutBody
                     drawerIsOpen
-                    drawerItems={drawerItems}  
+                    drawerItems={getDrawerItems(this.setCurrentPage.bind(this))}  
                 >
                     {this.renderCurrentPage()}
                 </LayoutBody>
@@ -36,7 +36,11 @@ class DocumentationApp extends Component {
     }
 
     renderCurrentPage() {
-        return React.createElement(ComponentAppBarPage);
+        return React.createElement(this.state.currentPage);
+    }
+
+    setCurrentPage(page) {
+        this.setState({ currentPage: page });
     }
 }
 
