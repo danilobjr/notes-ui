@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import { IconExpandMore } from './IconExpandMore'
+import { IconExpandLess } from './IconExpandLess'
 import { IconFile } from './IconFile'
 import { IconList } from './IconList'
 import { IconMenu } from './IconMenu'
@@ -7,6 +9,8 @@ import { IconSearch } from './IconSearch'
 import { colors } from 'styles'
 
 const icons = {
+    expandMore: IconExpandMore,
+    expandLess: IconExpandLess,
     file: IconFile,
     list: IconList,
     menu: IconMenu,
