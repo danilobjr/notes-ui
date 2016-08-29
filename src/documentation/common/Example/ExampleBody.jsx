@@ -12,7 +12,10 @@ const componentStyle = {
 
 const ExampleBody = (props) => 
     <div style={componentStyle.base}>
-        <Paragraph style={componentStyle.description}>{props.description}</Paragraph>
+        <Paragraph
+            style={componentStyle.description}
+            dangerouslySetInnerHTML={{ __html: props.description }} 
+        />
         {props.children}
     </div>
 
