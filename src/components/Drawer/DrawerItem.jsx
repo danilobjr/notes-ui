@@ -6,11 +6,23 @@ import { colors } from 'styles'
 const componentStyle = {
     base: {
         display: 'flex',
-        height: 54,
-        alignItems: 'center',
         cursor: 'pointer',
         userSelect: 'none',
-
+        alignItems: 'stretch',
+        flexDirection: 'column'
+    },
+    rootItem: {
+        display: 'flex',
+        height: 54,
+        alignItems: 'center'
+    },
+    icon: {
+        marginLeft: 25
+    },
+    text: {
+        marginLeft: 25
+    },
+    mouseEvents: {
         ':hover': {
             backgroundColor: colors.drawerItem.hover
         },
@@ -18,18 +30,17 @@ const componentStyle = {
         ':active': {
             backgroundColor: colors.drawerItem.active
         }
-    },
-    icon: {
-        marginLeft: 25
-    },
-    text: {
-        marginLeft: 25
     }
 };
 
 const getStyle = (style, props) => ([
     style.base,
     props.style
+])
+
+const getRootItemStyle = style => ([
+    style.rootItem,
+    style.mouseEvents
 ])
 
 @Radium
@@ -39,8 +50,11 @@ class DrawerItem extends Component {
 
         return (
             <div style={getStyle(componentStyle, this.props)} {...others}>
-                {this.renderIcon()}
-                <span style={componentStyle.text}>{this.props.text}</span>
+                <div style={getRootItemStyle(componentStyle)}>
+                    {this.renderIcon()}
+                    <span style={componentStyle.text}>{this.props.text}</span>
+                </div>
+                {this.renderSubitemsContainer()}
             </div>
         );
     }
@@ -53,6 +67,14 @@ class DrawerItem extends Component {
         }
 
         return <Icon style={componentStyle.icon} name={iconName} />;
+    }
+
+    renderSubitemsContainer() {
+        const { children } = this.props;
+
+        return children
+            ? <div>{children}</div>
+            : null;
     }
 }
 
