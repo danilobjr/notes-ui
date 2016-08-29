@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
-import { Layout, DrawerItem } from 'components'
+import { AppBar, LayoutBody, DrawerItem } from 'components'
 import { ComponentAppBarPage } from './pages'
+
+const componentStyle = {
+    base: {
+        display: 'flex',
+        height: '100vh',
+        backgroundColor: '#ececec',
+        flexDirection: 'column'
+    }
+};
 
 class DocumentationApp extends Component {
     constructor(props) {
@@ -13,14 +22,17 @@ class DocumentationApp extends Component {
 
     render() {
         return (
-            <Layout
-                title="JS Channel - UI Kit"
-                drawerItems={[
-                    <DrawerItem key="1" text="Components" />
-                ]}
-            >
-                {this.renderCurrentPage()}
-            </Layout>
+            <div style={componentStyle.base}>
+                <AppBar title="JS Channel - UI Kit" hideToggleDrawerIconButton />
+                <LayoutBody
+                    drawerIsOpen
+                    drawerItems={[
+                        <DrawerItem key="1" text="Components" />
+                    ]}  
+                >
+                    {this.renderCurrentPage()}
+                </LayoutBody>
+            </div>
         );
     }
 
