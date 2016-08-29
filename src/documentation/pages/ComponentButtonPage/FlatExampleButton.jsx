@@ -3,7 +3,7 @@ import { Example } from 'documentation/common'
 import { Button } from 'components'
 import { colors } from 'styles'
 
-const description = "If you pass the <code>flat</code> prop, it will look like a link. " +
+const description = "If you pass the <code class='inline'>flat</code> prop, it will look like a link. " +
     "When clicked, it will reveal a background color.";
 
 const code = `import React from 'react'
