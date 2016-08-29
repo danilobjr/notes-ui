@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Page, TopicHeader, Paragraph } from 'documentation/common'
 import { RawExampleButton } from './RawExampleButton'
 import { FlatExampleButton } from './FlatExampleButton'
+import { PropertiesButton } from './PropertiesButton'
 
 class ComponentButtonPage extends Component {
     render() {
@@ -15,6 +16,8 @@ class ComponentButtonPage extends Component {
                 <FlatExampleButton />
 
                 <TopicHeader>Properties</TopicHeader>
+
+                <PropertiesButton />
             </Page>
         );
     }
