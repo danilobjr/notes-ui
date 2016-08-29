@@ -16,6 +16,9 @@ const componentStyle = {
         height: 54,
         alignItems: 'center'
     },
+    subitem: {
+        paddingLeft: 20
+    },
     icon: {
         marginLeft: 25
     },
@@ -38,19 +41,20 @@ const getStyle = (style, props) => ([
     props.style
 ])
 
-const getRootItemStyle = style => ([
+const getRootItemStyle = (style, props) => ([
     style.rootItem,
-    style.mouseEvents
+    style.mouseEvents,
+    props.subitem && style.subitem
 ])
 
 @Radium
 class DrawerItem extends Component {
     render() {
-        const { style, iconName, text, ...others } = this.props;
+        const { style, iconName, text, subitem, ...others } = this.props;
 
         return (
             <div style={getStyle(componentStyle, this.props)} {...others}>
-                <div style={getRootItemStyle(componentStyle)}>
+                <div style={getRootItemStyle(componentStyle, this.props)}>
                     {this.renderIcon()}
                     <span style={componentStyle.text}>{this.props.text}</span>
                 </div>
@@ -80,7 +84,8 @@ class DrawerItem extends Component {
 
 DrawerItem.propTypes = {
     iconName: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    subitem: PropTypes.bool
 };
 
 export {
