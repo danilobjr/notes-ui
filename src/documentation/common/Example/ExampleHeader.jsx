@@ -17,7 +17,7 @@ const componentStyle = {
 const ExampleHeader = (props) => 
     <div style={componentStyle.base}>
         <h3 style={componentStyle.header}>{props.title}</h3>
-        <Button flat onClick={props.onClickShowCode}>Show Code</Button>
+        <Button flat onClick={props.onClickShowCode}>Toggle Code</Button>
     </div>
 
 ExampleHeader.propTypes = {
