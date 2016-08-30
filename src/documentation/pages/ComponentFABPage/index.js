@@ -1,0 +1,1 @@
+export { ComponentFABPage } from './ComponentFABPage'

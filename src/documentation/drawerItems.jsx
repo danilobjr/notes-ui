@@ -7,7 +7,8 @@ import {
     ComponentCheckboxPage,
     ComponentDrawerItemPage,
     ComponentDrawerPage,
-    ComponentDrawerSubitemsContainerPage
+    ComponentDrawerSubitemsContainerPage,
+    ComponentFABPage
 } from 'documentation/pages'
 
 const getDrawerItems = setCurrentPage => ([
@@ -19,6 +20,7 @@ const getDrawerItems = setCurrentPage => ([
         <DrawerItem subitem text="Drawer" onClick={() => setCurrentPage(ComponentDrawerPage)} />
         <DrawerItem subitem text="DrawerItem" onClick={() => setCurrentPage(ComponentDrawerItemPage)} />
         <DrawerItem subitem text="DrawerSubItemsContainer" onClick={() => setCurrentPage(ComponentDrawerSubitemsContainerPage)} />
+        <DrawerItem subitem text="FAB" onClick={() => setCurrentPage(ComponentFABPage)} />
     </DrawerSubitemsContainer>
 ]);
 
