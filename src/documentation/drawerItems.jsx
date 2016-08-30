@@ -8,7 +8,8 @@ import {
     ComponentDrawerItemPage,
     ComponentDrawerPage,
     ComponentDrawerSubitemsContainerPage,
-    ComponentFABPage
+    ComponentFABPage,
+    ComponentFloatingInputPage
 } from 'documentation/pages'
 
 const getDrawerItems = setCurrentPage => ([
@@ -18,9 +19,10 @@ const getDrawerItems = setCurrentPage => ([
         <DrawerItem subitem text="Card" onClick={() => setCurrentPage(ComponentCardPage)} />
         <DrawerItem subitem text="Checkbox" onClick={() => setCurrentPage(ComponentCheckboxPage)} />
         <DrawerItem subitem text="Drawer" onClick={() => setCurrentPage(ComponentDrawerPage)} />
-        <DrawerItem subitem text="DrawerItem" onClick={() => setCurrentPage(ComponentDrawerItemPage)} />
-        <DrawerItem subitem text="DrawerSubItemsContainer" onClick={() => setCurrentPage(ComponentDrawerSubitemsContainerPage)} />
+        <DrawerItem subitem text="Drawer Item" onClick={() => setCurrentPage(ComponentDrawerItemPage)} />
+        <DrawerItem subitem text="Drawer SubItems Container" onClick={() => setCurrentPage(ComponentDrawerSubitemsContainerPage)} />
         <DrawerItem subitem text="FAB" onClick={() => setCurrentPage(ComponentFABPage)} />
+        <DrawerItem subitem text="Floating Input" onClick={() => setCurrentPage(ComponentFloatingInputPage)} />
     </DrawerSubitemsContainer>
 ]);
 
