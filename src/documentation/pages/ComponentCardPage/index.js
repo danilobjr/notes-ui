@@ -1,0 +1,1 @@
+export { ComponentCardPage } from './ComponentCardPage'
