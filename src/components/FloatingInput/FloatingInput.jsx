@@ -18,6 +18,7 @@ const styleComponent = {
     input: {
         base: {
             flex: 1,
+            width: '100%',
             paddingBottom: '3px',
             marginRight: '18px',
             fontWeight: 300,
@@ -68,7 +69,6 @@ class FloatingInput extends Component {
 
 FloatingInput.propTypes = {
     placeholder: PropTypes.string,
-    elevation: propTypes.elevation,
     leftComponent: PropTypes.element
 };
 
