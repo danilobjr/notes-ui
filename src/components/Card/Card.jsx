@@ -20,7 +20,6 @@ class Card extends Component {
         return (
              <Paper
                  style={[componentStyle.base, style]}
-                 elevation={elevation}
                  {...others}
              >
                  {this.renderImage()}
@@ -57,9 +56,8 @@ class Card extends Component {
 
 Card.propTypes = {
     title: PropTypes.string,
-    color: propTypes.backgroundColors,
-    image: PropTypes.string,
-    elevation: propTypes.elevation
+    color: PropTypes.string,
+    image: PropTypes.string
 };
 
 export {
