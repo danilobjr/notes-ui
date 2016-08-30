@@ -4,7 +4,8 @@
   "description": "UI Kit with React.js components specially made for the app built in React for Beginners course on JS Channel, on YouTube.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base ./build --inline"
+    "start": "webpack-dev-server --content-base ./build --inline",
+    "build": "NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
