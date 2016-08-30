@@ -4,7 +4,7 @@ import { Button } from 'components'
 import { colors } from 'styles'
 
 const description = "This is how you get Button if you don't pass any props. " +
-    "It has a nice elevation and when hovered this shadow spreads a little bit.";
+    "It has a nice elevation and, when hovered, its shadow spreads a little bit.";
 
 const code = `import React from 'react'
 import { Button } from 'js-channel-ui-kit'
