@@ -6,11 +6,8 @@ import { elevation, colors } from 'styles'
 
 const componentStyle = {
     base: {
-        position: 'fixed',
         width: 56,
         height: 56,
-        bottom: 30,
-        right: 30,
         boxShadow: '0 6px 16px -5px rgba(0, 0, 0, 0.4)',
 
         ':hover': {
@@ -50,7 +47,7 @@ class FAB extends Component {
 }
 
 FAB.propTypes = {
-    iconName: PropTypes.string,
+    iconName: PropTypes.string.isRequired,
     color: PropTypes.string,
     iconColor: PropTypes.string
 };
