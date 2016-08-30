@@ -21,12 +21,13 @@ class Checkbox extends Component {
         super(props);
     
         this.state = {
-            checked: false
+            checked: props.checked
         };
     }
 
     render() {
-        const { className, style, onCheck, onUncheck, ...others } = this.props;
+        const { className, style, checked, 
+            onCheck, onUncheck, children, ...others } = this.props;
 
         return (
             <div
@@ -36,13 +37,9 @@ class Checkbox extends Component {
                 {...others}
             >
                 <CheckboxInput checked={this.state.checked} />
-                {this.renderChildren()}
+                {children}
             </div>
         );
-    }
-
-    renderChildren () {
-        return this.props.children || null;
     }
 
     handleClick(e) {
@@ -56,11 +53,13 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
+    checked: PropTypes.bool,
     onCheck: PropTypes.func,
     onUncheck: PropTypes.func
 };
 
 Checkbox.defaultProps = {
+    checked: false,
     onCheck: () => {},
     onUncheck: () => {}
 };
