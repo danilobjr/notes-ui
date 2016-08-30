@@ -6,7 +6,7 @@ import { CheckboxLabel } from 'components'
 const propTypes = {
     fontColors: PropTypes.oneOf(objectValues(colors.font)),
     backgroundColors: PropTypes.oneOf(objectValues(colors.background)),
-    elevation: PropTypes.oneOf([0,1,2,3,4,5])
+    elevation: PropTypes.oneOf([0,1,2,3])
 };
 
 export {
