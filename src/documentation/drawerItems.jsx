@@ -3,7 +3,8 @@ import { DrawerSubitemsContainer, DrawerItem } from 'components'
 import { 
     ComponentAppBarPage,
     ComponentButtonPage,
-    ComponentCardPage 
+    ComponentCardPage,
+    ComponentCheckboxPage
 } from 'documentation/pages'
 
 const getDrawerItems = setCurrentPage => ([
@@ -11,6 +12,7 @@ const getDrawerItems = setCurrentPage => ([
         <DrawerItem subitem text="App Bar" onClick={() => setCurrentPage(ComponentAppBarPage)} />
         <DrawerItem subitem text="Button" onClick={() => setCurrentPage(ComponentButtonPage)} />
         <DrawerItem subitem text="Card" onClick={() => setCurrentPage(ComponentCardPage)} />
+        <DrawerItem subitem text="Checkbox" onClick={() => setCurrentPage(ComponentCheckboxPage)} />
     </DrawerSubitemsContainer>
 ]);
 

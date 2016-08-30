@@ -1,0 +1,1 @@
+export { ComponentCheckboxPage } from './ComponentCheckboxPage'
