@@ -40,7 +40,7 @@ class IconButton extends Component {
 
 IconButton.propTypes = {
     iconName: PropTypes.string.isRequired,
-    iconColor: propTypes.fontColors
+    iconColor: PropTypes.string
 };
 
 export {
