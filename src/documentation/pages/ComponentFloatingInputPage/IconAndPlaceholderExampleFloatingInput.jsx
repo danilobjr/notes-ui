@@ -17,6 +17,9 @@ const code = `import React from 'react'
 import { FloatingInput } from 'js-channel-ui-kit'
 
 const style = {
+    base: {
+        width: 246
+    },
     icon: {
         margin: '0 14px 0 18px'
     }
@@ -24,8 +27,9 @@ const style = {
 
 const Example = () => 
     <FloatingInput
+        style={style.base}
         placeholder="Search"
-        leftComponent={<Icon style={style.icon} name="search />"}
+        leftElement={<Icon style={style.icon} name="search />"}
     />`;
 
 const IconAndPlaceholderExampleFloatingInput = (props) => 
@@ -37,7 +41,7 @@ const IconAndPlaceholderExampleFloatingInput = (props) =>
         <FloatingInput
             style={componentStyle.base}
             placeholder="Search"
-            leftComponent={<Icon style={componentStyle.icon} name="search" />}
+            leftElement={<Icon style={componentStyle.icon} name="search" />}
         />
     </Example>
 

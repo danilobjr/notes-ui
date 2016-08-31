@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Page, TopicHeader, Paragraph } from 'documentation/common'
 import { RawExampleFloatingInput } from './RawExampleFloatingInput'
 import { IconAndPlaceholderExampleFloatingInput } from './IconAndPlaceholderExampleFloatingInput'
+import { PropertiesFloatingInput } from './PropertiesFloatingInput'
 
 class ComponentFloatingInputPage extends Component {
     render() {
@@ -18,6 +19,7 @@ class ComponentFloatingInputPage extends Component {
 
                 <TopicHeader>Properties</TopicHeader>
 
+                <PropertiesFloatingInput />
             </Page>
         );
     }
