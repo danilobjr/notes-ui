@@ -1,0 +1,1 @@
+export { ComponentPaperPage } from './ComponentPaperPage'

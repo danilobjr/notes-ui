@@ -12,7 +12,8 @@ import {
     ComponentFloatingInputPage,
     ComponentIconButtonPage,
     ComponentIconPage,
-    ComponentLayoutPage
+    ComponentLayoutPage,
+    ComponentPaperPage
 } from 'documentation/pages'
 
 const getDrawerItems = setCurrentPage => ([
@@ -29,6 +30,7 @@ const getDrawerItems = setCurrentPage => ([
         <DrawerItem subitem text="Icon Button" onClick={() => setCurrentPage(ComponentIconButtonPage)} />
         <DrawerItem subitem text="Icon" onClick={() => setCurrentPage(ComponentIconPage)} />
         <DrawerItem subitem text="Layout" onClick={() => setCurrentPage(ComponentLayoutPage)} />
+        <DrawerItem subitem text="Paper" onClick={() => setCurrentPage(ComponentPaperPage)} />
     </DrawerSubitemsContainer>
 ]);
 
