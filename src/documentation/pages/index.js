@@ -8,3 +8,4 @@ export { ComponentDrawerSubitemsContainerPage } from './ComponentDrawerSubitemsC
 export { ComponentFABPage } from './ComponentFABPage'
 export { ComponentFloatingInputPage } from './ComponentFloatingInputPage'
 export { ComponentIconButtonPage } from './ComponentIconButtonPage'
+export { ComponentIconPage } from './ComponentIconPage'
