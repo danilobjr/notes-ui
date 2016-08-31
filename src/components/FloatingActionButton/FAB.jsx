@@ -33,7 +33,7 @@ const getStyle = (style, props) => ([
 @Radium
 class FAB extends Component {
     render() {
-        const { iconName, iconColor, ...others } = this.props;
+        const { style, iconName, iconColor, ...others } = this.props;
 
         return (
             <IconButton
