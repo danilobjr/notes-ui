@@ -6,8 +6,7 @@ import { LayoutBody } from './LayoutBody'
 const componentStyle = {
     base: {
         display: 'flex',
-        width: '100vw',
-        height: '100vh',
+        width: '100%',
         backgroundColor: '#ececec',
         boxSizing: 'border-box',
         flexDirection: 'column',

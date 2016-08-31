@@ -5,7 +5,7 @@ import { Drawer, DrawerItem } from 'components'
 const componentStyle = {
     base: {
         display: 'flex',
-        width: '100vw'
+        width: '100%'
     },
     drawer: {
         height: 'calc(100vh - 64px)',
