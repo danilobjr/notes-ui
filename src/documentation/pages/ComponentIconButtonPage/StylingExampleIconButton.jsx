@@ -2,7 +2,6 @@ import React from 'react'
 import { Example } from 'documentation/common'
 import { IconButton } from 'components'
 import color from 'color'
-console.log(color);
 
 const componentStyle = {
     base: {
