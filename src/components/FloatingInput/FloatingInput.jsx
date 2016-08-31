@@ -25,7 +25,7 @@ const styleComponent = {
             backgroundColor: colors.background.white,
             border: 'none'
         },
-        noLeftComponent: {
+        noLeftElement: {
             marginLeft: '22px'
         }
     }
@@ -33,20 +33,20 @@ const styleComponent = {
 
 const getInputStyle = (style, props) => ([
     style.input.base,
-    !props.leftComponent && style.input.noLeftComponent
+    !props.leftElement && style.input.noLeftElement
 ])
 
 @Radium
 class FloatingInput extends Component {
     render() {
-        const { style, leftComponent, ...others } = this.props;
+        const { style, leftElement, ...others } = this.props;
 
         return (
             <Paper
                 style={[styleComponent.base, style]} 
                 {...others}
             >
-                {this.renderLeftComponent()}
+                {this.renderLeftElement()}
                 <input
                     style={getInputStyle(styleComponent, this.props)}
                     type="text"
@@ -56,20 +56,20 @@ class FloatingInput extends Component {
         );
     }
 
-    renderLeftComponent() {
-        const { leftComponent } = this.props;
+    renderLeftElement() {
+        const { leftElement } = this.props;
 
-        if (!leftComponent) {
+        if (!leftElement) {
             return null;
         }
 
-        return leftComponent;
+        return leftElement;
     }
 }
 
 FloatingInput.propTypes = {
     placeholder: PropTypes.string,
-    leftComponent: PropTypes.element
+    leftElement: PropTypes.element
 };
 
 export {
