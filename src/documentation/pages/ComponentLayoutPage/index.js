@@ -1,0 +1,1 @@
+export { ComponentLayoutPage } from './ComponentLayoutPage'
