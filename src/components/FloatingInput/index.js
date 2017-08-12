@@ -1,1 +1,0 @@
-export { FloatingInput } from './FloatingInput'
