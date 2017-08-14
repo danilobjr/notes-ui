@@ -1,1 +1,0 @@
-export { DocumentationApp } from './DocumentationApp'
