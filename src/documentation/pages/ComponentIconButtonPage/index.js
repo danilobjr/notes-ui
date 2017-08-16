@@ -1,1 +1,0 @@
-export { ComponentIconButtonPage } from './ComponentIconButtonPage'
