@@ -6,7 +6,7 @@ import { Paper, PaperProps } from 'components';
 import { CardBody } from 'components/Card/CardBody';
 import { CardImage } from 'components/Card/CardImage';
 import { CardTitle } from 'components/Card/CardTitle';
-import { elevation, FontColor } from 'styles';
+import { elevation, BackgroundColor, FontColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -17,7 +17,7 @@ const componentStyle = {
 };
 
 export interface CardProps extends PaperProps {
-  color?: string;
+  color?: BackgroundColor;
   image?: string;
   title?: string;
 }

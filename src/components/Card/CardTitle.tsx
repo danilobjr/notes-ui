@@ -30,8 +30,8 @@ const getStyle = (style, props) => ([
 ]);
 
 export interface CardTitleProps extends HTMLProps<HTMLHeadingElement> {
-  fontColor: FontColor;
   bgColor: BackgroundColor;
+  fontColor: FontColor;
 }
 
 @Radium
