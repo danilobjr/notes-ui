@@ -62,7 +62,7 @@ export class Layout extends PureComponent<LayoutProps, LayoutState> {
 
         <LayoutBody
           drawerItems={drawerItems}
-          drawerIsOpen={drawerIsOpen}
+          drawerOpen={drawerOpen}
         >
           {children}
         </LayoutBody>
