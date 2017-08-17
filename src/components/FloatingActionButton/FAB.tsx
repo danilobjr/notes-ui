@@ -4,7 +4,7 @@ import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
 import color from 'color';
 import { IconButton, IconButtonProps } from 'components';
-import { elevation, colors } from 'styles';
+import { elevation, BackgroundColor, FontColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -37,8 +37,8 @@ export interface FABProps extends IconButtonProps {}
 @Radium
 export class FAB extends PureComponent<FABProps, {}> {
   static defaultProps: Partial<FABProps> = {
-    color: color(colors.background.red).darken(.1).rgbString(),
-    iconColor: colors.font.white,
+    color: color(BackgroundColor.Red).darken(.1).rgbString(),
+    iconColor: FontColor.White,
   };
 
   render() {

@@ -3,13 +3,13 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
 import { Paper, PaperProps } from 'components';
-import { elevation, colors } from 'styles';
+import { elevation, BackgroundColor, ButtonColor } from 'styles';
 
 const componentStyle = {
   base: {
     display: 'inline-block',
     padding: '10px 16px',
-    backgroundColor: colors.background.white,
+    backgroundColor: BackgroundColor.White,
     borderRadius: '3px',
     cursor: 'pointer',
     userSelect: 'none',
@@ -17,7 +17,7 @@ const componentStyle = {
     ':hover': elevation['2'],
 
     ':active': {
-      backgroundColor: colors.button.active,
+      backgroundColor: ButtonColor.Active,
     },
   },
   flat: {

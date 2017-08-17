@@ -3,7 +3,7 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { CSSProperties, PureComponent, ReactNode } from 'react';
 import { Paper, PaperProps } from 'components';
-import { elevation, colors } from 'styles';
+import { elevation, BackgroundColor } from 'styles';
 
 const styleComponent = {
   base: {
@@ -12,7 +12,7 @@ const styleComponent = {
     height: '54px',
     borderRadius: '27px',
     borderTop: '1px solid white',
-    backgroundColor: colors.background.white,
+    backgroundColor: BackgroundColor.White,
 
     ':focus': elevation['2'],
   },
@@ -23,7 +23,7 @@ const styleComponent = {
       paddingBottom: '3px',
       marginRight: '18px',
       fontWeight: 300,
-      backgroundColor: colors.background.white,
+      backgroundColor: BackgroundColor.White,
       border: 'none',
     },
     noLeftElement: {

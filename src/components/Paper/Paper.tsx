@@ -2,11 +2,11 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent } from 'react';
-import { colors, elevation } from 'styles';
+import { BackgroundColor, elevation } from 'styles';
 
 const componentStyle = {
   base: {
-    backgroundColor: colors.background.white,
+    backgroundColor: BackgroundColor.White,
     boxSizing: 'border-box',
     overflow: 'hidden',
   },

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent, PropTypes } from 'react';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const componentStyle = {
   input: {
@@ -23,8 +23,8 @@ const componentStyle = {
     },
     inputChecked: {
       display: 'block',
-      borderBottom: `2px solid ${colors.font.lightGray}`,
-      borderLeft: `2px solid ${colors.font.lightGray}`,
+      borderBottom: `2px solid ${FontColor.LightGray}`,
+      borderLeft: `2px solid ${FontColor.LightGray}`,
       borderTop: 'none',
       borderRight: 'none',
       width: '13px',

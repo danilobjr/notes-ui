@@ -6,7 +6,7 @@ import { Paper, PaperProps } from 'components';
 import { CardBody } from 'components/Card/CardBody';
 import { CardImage } from 'components/Card/CardImage';
 import { CardTitle } from 'components/Card/CardTitle';
-import { elevation, colors } from 'styles';
+import { elevation, FontColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -46,7 +46,7 @@ export class Card extends PureComponent<CardProps, {}> {
       return null;
     }
 
-    const fontColor = color ? colors.font.white : colors.font.gray;
+    const fontColor = color ? FontColor.White : FontColor.Gray;
 
     return <CardTitle fontColor={fontColor} bgColor={color}>{title}</CardTitle>;
   }

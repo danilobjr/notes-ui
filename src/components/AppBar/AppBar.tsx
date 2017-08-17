@@ -3,14 +3,14 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { CSSProperties, PureComponent } from 'react';
 import { Paper, PaperProps, IconButton } from 'components';
-import { colors } from 'styles';
+import { BackgroundColor } from 'styles';
 
 const componentStyle = {
   base: {
     display: 'flex',
     width: '100%',
     minHeight: 64,
-    backgroundColor: colors.background.white,
+    backgroundColor: BackgroundColor.White,
     alignItems: 'center',
     zIndex: 10000,
   },

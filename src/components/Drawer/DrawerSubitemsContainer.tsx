@@ -4,7 +4,7 @@ import * as omit from 'lodash.omit';
 import { CSSProperties, HTMLProps, PureComponent, PropTypes } from 'react';
 import { Icon } from 'components';
 import { DrawerContent } from './DrawerContent';
-import { colors } from 'styles';
+import { DrawerItemColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -16,11 +16,11 @@ const componentStyle = {
     alignItems: 'center',
 
     ':hover': {
-      backgroundColor: colors.drawerItem.hover,
+      backgroundColor: DrawerItemColor.Hover,
     },
 
     ':active': {
-      backgroundColor: colors.drawerItem.active,
+      backgroundColor: DrawerItemColor.Active,
     },
   } as CSSProperties,
   expandIcon: {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent } from 'react';
-import { colors } from 'styles';
+import { BackgroundColor, FontColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -22,7 +22,7 @@ const componentStyle = {
 
 const getStyle = (style, props) => ([
   style.base,
-  props.bgColor === colors.background.white && style.noPaddingBottom,
+  props.bgColor === BackgroundColor.White && style.noPaddingBottom,
   {
     color: props.fontColor,
     backgroundColor: props.bgColor,
@@ -30,16 +30,16 @@ const getStyle = (style, props) => ([
 ]);
 
 export interface CardTitleProps extends HTMLProps<HTMLHeadingElement> {
-  fontColor: propTypes.fontColors;
-  bgColor: propTypes.backgroundColors;
+  fontColor: FontColor;
+  bgColor: BackgroundColor;
 }
 
 @Radium
 export class CardTitle extends PureComponent<CardTitleProps, {}> {
   static defaultProps: CardTitleProps = {
-    bgColor: colors.background.white,
+    bgColor: BackgroundColor.White,
     children: 'Title',
-    fontColor: colors.font.white,
+    fontColor: FontColor.White,
   };
 
   render() {

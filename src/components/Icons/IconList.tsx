@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { SFC } from 'react';
-import { colors } from 'styles';
 import { CommonProps } from './CommonProps';
 
 export const IconList: SFC<CommonProps> = ({ color, style }) => {

@@ -8,7 +8,7 @@ import { IconList } from './IconList';
 import { IconMenu } from './IconMenu';
 import { IconPlus } from './IconPlus';
 import { IconSearch } from './IconSearch';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const icons = {
   expandMore: IconExpandMore,
@@ -34,7 +34,7 @@ export interface IconProps extends HTMLProps<HTMLElement> {
 
 export class Icon extends PureComponent<IconProps, {}> {
   static defaultProps: Partial<IconProps> = {
-    color: colors.font.gray,
+    color: FontColor.Gray,
   };
 
   render() {

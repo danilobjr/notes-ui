@@ -3,7 +3,7 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent, PropTypes } from 'react';
 import { DrawerContent, DrawerContentProps } from './DrawerContent';
-import { colors } from 'styles';
+import { DrawerItemColor } from 'styles';
 
 const componentStyle = {
   base: {
@@ -13,15 +13,15 @@ const componentStyle = {
     alignItems: 'center',
 
     ':hover': {
-      backgroundColor: colors.drawerItem.hover,
+      backgroundColor: DrawerItemColor.Hover,
     },
 
     ':active': {
-      backgroundColor: colors.drawerItem.active,
+      backgroundColor: DrawerItemColor.Active,
     },
   },
   active: {
-    backgroundColor: colors.drawerItem.active,
+    backgroundColor: DrawerItemColor.Active,
   },
   subitem: {
     paddingLeft: 20,
