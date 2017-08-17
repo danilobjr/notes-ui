@@ -1,6 +1,6 @@
 import * as React from 'react';
+import * as Color from 'color';
 import { SFC } from 'react';
-import color from 'color';
 import { Example } from 'docs/common';
 import { Button } from 'components';
 import { FontColor } from 'styles';
@@ -11,7 +11,7 @@ const componentStyle = {
     backgroundColor: '#3498db',
 
     ':active': {
-      backgroundColor: color('#3498db').darken(.2).hexString(),
+      backgroundColor: Color('#3498db').darken(.2).rgb().string(),
     },
   },
 };

@@ -1,15 +1,15 @@
 import * as React from 'react';
+import * as Color from 'color';
 import { SFC } from 'react';
 import { Example } from 'docs/common';
 import { IconButton } from 'components';
-import color from 'color';
 
 const componentStyle = {
   base: {
     backgroundColor: '#3498db',
 
     ':active': {
-      backgroundColor: color('#3498db').lighten(.2).hexString(),
+      backgroundColor: Color('#3498db').lighten(.2).rgb().string(),
     },
   },
 };

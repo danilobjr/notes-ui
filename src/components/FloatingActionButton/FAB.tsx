@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
+import * as Color from 'color';
 import { PureComponent } from 'react';
-import color from 'color';
 import { IconButton, IconButtonProps } from 'components';
 import { elevation, BackgroundColor, FontColor } from 'styles';
 
@@ -22,7 +22,7 @@ const setBackgroundColor = bgColor => ({
   backgroundColor: bgColor,
 
   ':active': {
-    backgroundColor: color(bgColor).lighten(0.2).rgbString(),
+    backgroundColor: Color(bgColor).lighten(0.2).rgb().string(),
   },
 });
 
@@ -37,7 +37,7 @@ export interface FABProps extends IconButtonProps {}
 @Radium
 export class FAB extends PureComponent<FABProps, {}> {
   static defaultProps: Partial<FABProps> = {
-    color: color(BackgroundColor.Red).darken(.1).rgbString(),
+    color: Color(BackgroundColor.Red).darken(.1).rgb().string(),
     iconColor: FontColor.White,
   };
 

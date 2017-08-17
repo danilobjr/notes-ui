@@ -34,7 +34,7 @@ export const StylingExampleCard: SFC<any> = () => (
     <Card
       style={componentStyle.base}
       title="Thoughts"
-      color="#3498db"
+      color={'#3498db' as any}
     >
       Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
       ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
