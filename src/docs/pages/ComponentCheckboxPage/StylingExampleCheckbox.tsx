@@ -2,13 +2,13 @@ import * as React from 'react';
 import { PureComponent } from 'react';
 import { Example } from 'docs/common';
 import { Checkbox } from 'components';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const componentStyle = {
   checked: {
     fontStyle: 'italic',
     fontWeight: 600,
-    color: colors.font.lightGray,
+    color: FontColor.LightGray,
     textDecoration: 'line-through',
   },
 };

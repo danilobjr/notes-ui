@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { Example } from 'docs/common';
 import { AppBar } from 'components';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const componentStyle = {
   example: {
@@ -34,7 +34,7 @@ export const StylingExampleAppBar: SFC<any> = () => (
     code={code}
     description={description}
   >
-    <AppBar style={componentStyle.example} toggleDrawerIconColor={colors.font.white} />
+    <AppBar style={componentStyle.example} toggleDrawerIconColor={FontColor.White} />
   </Example>
 );
 

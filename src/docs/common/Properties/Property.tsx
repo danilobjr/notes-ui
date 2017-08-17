@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import { CSSProperties, PureComponent } from 'react';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const componentStyle = {
   td: {
@@ -9,13 +9,13 @@ const componentStyle = {
     fontWeight: 100,
   } as CSSProperties,
   name: {
-    color: colors.font.blue,
+    color: FontColor.Blue,
   },
   type: {
-    color: colors.font.red,
+    color: FontColor.Red,
   },
   defaultValue: {
-    color: colors.font.gray,
+    color: FontColor.Gray,
   },
 };
 

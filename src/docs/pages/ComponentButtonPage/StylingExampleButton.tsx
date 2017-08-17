@@ -3,11 +3,11 @@ import { SFC } from 'react';
 import color from 'color';
 import { Example } from 'docs/common';
 import { Button } from 'components';
-import { colors } from 'styles';
+import { FontColor } from 'styles';
 
 const componentStyle = {
   base: {
-    color: colors.font.white,
+    color: FontColor.White,
     backgroundColor: '#3498db',
 
     ':active': {

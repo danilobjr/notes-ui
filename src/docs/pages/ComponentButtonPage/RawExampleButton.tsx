@@ -2,7 +2,6 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { Example } from 'docs/common';
 import { Button } from 'components';
-import { colors } from 'styles';
 
 const description = 'This is how you get Button if you don\'t pass any props. ' +
   'It has a nice elevation and, when hovered, its shadow spreads a little bit.';
