@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
-import { Paper  } from 'components';
+import { Paper, PaperProps } from 'components';
 import { CardBody } from 'components/Card/CardBody';
 import { CardImage } from 'components/Card/CardImage';
 import { CardTitle } from 'components/Card/CardTitle';
@@ -16,7 +16,7 @@ const componentStyle = {
   },
 };
 
-export interface CardProps {
+export interface CardProps extends PaperProps {
   color?: string;
   image?: string;
   title?: string;
