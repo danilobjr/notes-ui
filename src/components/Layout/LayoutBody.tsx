@@ -34,7 +34,7 @@ export interface LayoutBodyProps extends HTMLProps<HTMLDivElement> {
 }
 
 @Radium
-class LayoutBody extends PureComponent<LayoutBodyProps, {}> {
+export class LayoutBody extends PureComponent<LayoutBodyProps, {}> {
   render() {
     const { drawerItems, children, ...otherProps } = omit(this.props, ['drawerOpen', 'style']);
 
