@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DocumentationApp } from './documentation';
+import { DocsApp } from './docs';
 
 const appContainer = document.getElementById('app');
 
-ReactDOM.render(<DocumentationApp />, appContainer, () => { return; });
+ReactDOM.render(<DocsApp />, appContainer, () => { return; });
