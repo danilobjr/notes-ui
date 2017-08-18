@@ -61,7 +61,8 @@ export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContain
   }
 
   render() {
-    const { children, expanded, iconName, text, ...otherProps } = omit(this.props, ['style']);
+    const { children, iconName, text, ...otherProps } = omit(this.props, ['expanded', 'style']);
+    const { expanded } = this.state;
 
     return (
       <div
@@ -98,6 +99,7 @@ export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContain
   }
 
   handleClick = () => {
+    console.log(this.state.expanded);
     this.setState({ expanded: !this.state.expanded });
   }
 }
