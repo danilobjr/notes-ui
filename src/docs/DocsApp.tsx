@@ -32,7 +32,7 @@ export class DocsApp extends PureComponent<{}, DocumentationAppState> {
         <AppBar title="JS Channel - UI Kit" hideToggleDrawerIconButton />
 
         <LayoutBody
-          drawerItems={getDrawerItems(this.setCurrentPage.bind(this))}
+          drawerItems={getDrawerItems(this.setCurrentPage)}
           drawerOpen
         >
           {this.renderCurrentPage()}
@@ -45,7 +45,7 @@ export class DocsApp extends PureComponent<{}, DocumentationAppState> {
     return React.createElement(this.state.currentPage);
   }
 
-  setCurrentPage(page: ReactNode) {
+  setCurrentPage = (page: ReactNode) => {
     this.setState({ currentPage: page });
   }
 }
