@@ -7,6 +7,7 @@ export enum FontColor {
 }
 
 export enum BackgroundColor {
+  Black = '#000',
   White = '#f8f8f8',
   Yellow = '#fcdd8d',
   Pink = '#eea2c8',
