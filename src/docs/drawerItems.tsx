@@ -14,6 +14,7 @@ import {
   ComponentIconPage,
   ComponentLayoutPage,
   ComponentPaperPage,
+  ModalPage,
 } from 'docs/pages';
 
 export const getDrawerItems = setCurrentPage => (
@@ -34,6 +35,7 @@ export const getDrawerItems = setCurrentPage => (
     <DrawerItem subitem text="Icon Button" onClick={() => setCurrentPage(ComponentIconButtonPage)} />
     <DrawerItem subitem text="Icon" onClick={() => setCurrentPage(ComponentIconPage)} />
     <DrawerItem subitem text="Layout" onClick={() => setCurrentPage(ComponentLayoutPage)} />
+    <DrawerItem subitem text="Modal" onClick={() => setCurrentPage(ModalPage)} />
     <DrawerItem subitem text="Paper" onClick={() => setCurrentPage(ComponentPaperPage)} />
   </DrawerSubitemsContainer>
 );

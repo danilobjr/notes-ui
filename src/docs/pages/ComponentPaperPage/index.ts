@@ -1,1 +1,1 @@
-export { ComponentPaperPage } from './ComponentPaperPage'
+export { ComponentPaperPage } from './ComponentPaperPage';

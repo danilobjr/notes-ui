@@ -11,3 +11,4 @@ export * from './ComponentIconButtonPage';
 export * from './ComponentIconPage';
 export * from './ComponentLayoutPage';
 export * from './ComponentPaperPage';
+export * from './ModalPage';
