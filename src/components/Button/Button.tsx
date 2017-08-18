@@ -29,9 +29,9 @@ const componentStyle = {
   },
 };
 
-const getStyle = (style, props) => ([
-  style.base,
-  props.flat && style.flat,
+const getStyle = (props) => ([
+  componentStyle.base,
+  props.flat && componentStyle.flat,
   props.style,
 ]);
 
@@ -47,11 +47,11 @@ export class Button extends PureComponent<ButtonProps, {}> {
   };
 
   render() {
-    const { children, ...otherProps } = omit(this.props, ['flat']);
+    const { children, ...otherProps } = omit(this.props, ['flat', 'style']);
 
     return (
       <Paper
-        style={getStyle(componentStyle, this.props)}
+        style={getStyle(this.props)}
         {...otherProps}
       >
         {children}
