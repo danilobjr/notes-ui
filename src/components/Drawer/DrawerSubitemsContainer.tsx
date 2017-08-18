@@ -99,7 +99,6 @@ export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContain
   }
 
   handleClick = () => {
-    console.log(this.state.expanded);
     this.setState({ expanded: !this.state.expanded });
   }
 }
