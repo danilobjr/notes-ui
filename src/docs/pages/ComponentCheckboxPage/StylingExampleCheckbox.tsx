@@ -40,10 +40,7 @@ class StylingCheckbox extends Component {
     const { checked } = this.state;
 
     return (
-      <Checkbox
-        onCheck={() => this.checkOption()}
-        onUncheck={() => this.uncheckOption()}
-      >
+      <Checkbox onChange={this.handleChange}>
         <span style={checked ? style.checked : {}}>
           Lunch with my friends
         </span>
@@ -51,12 +48,8 @@ class StylingCheckbox extends Component {
     );
   }
 
-  checkOption() {
-    this.setState({ checked: true });
-  }
-
-  uncheckOption() {
-    this.setState({ checked: false });
+  handleChange = () => {
+    this.setState({ checked: !this.state.checked });
   }
 }`;
 
@@ -82,9 +75,7 @@ export class StylingExampleCheckbox extends PureComponent<{}, StylingExampleChec
         description={description}
         code={code}
       >
-        <Checkbox
-          onChange={this.handleChange}
-        >
+        <Checkbox onChange={this.handleChange}>
           <span style={checked ? componentStyle.checked : {}}>
             Lunch with my friends
           </span>
@@ -93,11 +84,7 @@ export class StylingExampleCheckbox extends PureComponent<{}, StylingExampleChec
     );
   }
 
-  handleChange() {
+  handleChange = () => {
     this.setState({ checked: !this.state.checked });
-  }
-
-  uncheckOption() {
-    this.setState({ checked: false });
   }
 }
