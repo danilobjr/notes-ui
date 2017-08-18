@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "outDir": "",
+    "baseUrl": ".",
+    "paths": {
+      "components": ["src/components/index.ts"],
+      "components/*": ["src/components/*"],
+      "docs/*": ["src/docs/*"],
+      "styles": ["src/components/styles/index.ts"]
+    }
+  }
+}
