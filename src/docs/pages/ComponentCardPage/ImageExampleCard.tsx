@@ -23,7 +23,7 @@ const CardExample = () => (
   <Card
     style={style}
     title="Restaurant"
-    image="http://www.thebroadmoorblog.com/wp-content/uploads/P1010253.jpg"
+    image="http://proural.info.opt-images.1c-bitrix-cdn.ru/upload/iblock/66c/66c21eb3acb6b59e85bb022d330f38a6.jpg?1497597442216529"
   >
     Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
     ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
@@ -39,7 +39,7 @@ export const ImageExampleCard: SFC<any> = () => (
     <Card
       style={componentStyle.base}
       title="Restaurant"
-      image="http://www.thebroadmoorblog.com/wp-content/uploads/P1010253.jpg"
+      image="http://proural.info.opt-images.1c-bitrix-cdn.ru/upload/iblock/66c/66c21eb3acb6b59e85bb022d330f38a6.jpg?1497597442216529"
     >
       Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
             ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
