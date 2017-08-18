@@ -16,8 +16,8 @@ const componentStyle = {
   },
 };
 
-const getStyle = (style, props) => ([
-  style.base,
+const getStyle = (props) => ([
+  componentStyle.base,
   props.style,
 ]);
 
@@ -33,8 +33,8 @@ export class IconButton extends PureComponent<IconButtonProps, {}> {
 
     return (
       <Button
-        style={getStyle(componentStyle, this.props)}
         flat
+        style={getStyle(this.props)}
         {...otherProps as any}
       >
         <Icon name={iconName} color={iconColor} />

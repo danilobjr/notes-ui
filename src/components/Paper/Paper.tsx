@@ -12,8 +12,8 @@ const componentStyle = {
   },
 };
 
-const getStyle = (style, props) => ([
-  style.base,
+const getStyle = (props) => ([
+  componentStyle.base,
   props.elevation && elevation[props.elevation],
   props.style,
 ]);
@@ -35,7 +35,7 @@ export class Paper extends PureComponent<PaperProps, {}> {
 
     return (
       <div
-        style={getStyle(componentStyle, this.props)}
+        style={getStyle(this.props)}
         {...otherProps}
       >
         {this.props.children}
