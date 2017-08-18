@@ -83,12 +83,12 @@ export class AppBar extends PureComponent<AppBarProps, {}> {
         iconColor={toggleDrawerIconColor}
         iconName="menu"
         flat
-        onClick={this.handleToggleDrawerClick.bind(this)}
+        onClick={this.handleToggleDrawerClick}
       />
     );
   }
 
-  handleToggleDrawerClick() {
+  handleToggleDrawerClick= () => {
     this.props.onToggleDrawerClick();
   }
 }
