@@ -9,9 +9,7 @@ const description = 'If you pass the <code class="inline">flat</code> prop, it w
 const code = `import React from 'react';
 import { Button } from 'jsc-react-ui';
 
-const ButtonExample = () => (
-  <Button flat />
-);`;
+const ButtonExample = () => <Button flat />;`;
 
 export const FlatExampleButton: SFC < any > = () => (
   <Example
