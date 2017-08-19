@@ -20,8 +20,8 @@ export declare class Icon extends PureComponent<IconProps, {}> {
         autoFocus?: boolean;
         autoPlay?: boolean;
         capture?: boolean;
-        cellPadding?: React.ReactText;
-        cellSpacing?: React.ReactText;
+        cellPadding?: React.CSSLength;
+        cellSpacing?: React.CSSLength;
         charSet?: string;
         challenge?: string;
         checked?: boolean;
@@ -46,9 +46,9 @@ export declare class Icon extends PureComponent<IconProps, {}> {
         formMethod?: string;
         formNoValidate?: boolean;
         formTarget?: string;
-        frameBorder?: React.ReactText;
+        frameBorder?: React.CSSLength;
         headers?: string;
-        height?: React.ReactText;
+        height?: React.CSSLength;
         high?: number;
         href?: string;
         hrefLang?: string;
@@ -65,12 +65,12 @@ export declare class Icon extends PureComponent<IconProps, {}> {
         manifest?: string;
         marginHeight?: number;
         marginWidth?: number;
-        max?: React.ReactText;
+        max?: React.CSSLength;
         maxLength?: number;
         media?: string;
         mediaGroup?: string;
         method?: string;
-        min?: React.ReactText;
+        min?: React.CSSLength;
         minLength?: number;
         multiple?: boolean;
         muted?: boolean;
@@ -104,13 +104,13 @@ export declare class Icon extends PureComponent<IconProps, {}> {
         srcLang?: string;
         srcSet?: string;
         start?: number;
-        step?: React.ReactText;
+        step?: React.CSSLength;
         summary?: string;
         target?: string;
         type?: string;
         useMap?: string;
         value?: string | number | string[];
-        width?: React.ReactText;
+        width?: React.CSSLength;
         wmode?: string;
         wrap?: string;
         defaultChecked?: boolean;
@@ -292,7 +292,7 @@ export declare class Icon extends PureComponent<IconProps, {}> {
         onTransitionEnd?: React.EventHandler<React.TransitionEvent<HTMLElement>>;
         onTransitionEndCapture?: React.EventHandler<React.TransitionEvent<HTMLElement>>;
         ref?: React.Ref<HTMLElement>;
-        key?: React.ReactText;
+        key?: React.CSSLength;
         style: {
             width: number;
             height: number;
