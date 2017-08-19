@@ -28,6 +28,7 @@ const styles = {
     opacity: 0,
   },
   modal: {
+    display: 'flex',
     width: 300,
     height: 200,
     borderRadius: 4,
@@ -49,14 +50,14 @@ export class Modal extends PureComponent<ModalProps, {}> {
   };
 
   render() {
-    const { children, noBackdrop, open, onClose, ...otherProps } = omit(this.props, ['style']);
+    const { children, noBackdrop, open, style, onClose, ...otherProps } = this.props;
 
     return open && (
       <div style={styles.container}>
         <Paper
           elevation={2}
-          style={styles.modal}
-          {...otherProps}
+          style={[styles.modal, style]}
+          {...otherProps as any}
         >
           { children }
         </Paper>
