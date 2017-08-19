@@ -1,5 +1,5 @@
 {
-  "name": "react-for-beginners-ui-kit",
+  "name": "jsc-react-ui",
   "version": "1.0.0",
   "description": "UI Kit with React.js components specially made for the app built in React for Beginners course on JS Channel, on YouTube.",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danilobjr/react-for-beginners-ui-kit/"
+    "url": "https://github.com/danilobjr/jsc-react-ui/"
   },
   "keywords": [
     "react",
