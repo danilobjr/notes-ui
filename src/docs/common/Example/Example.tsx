@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { PureComponent, PropTypes } from 'react';
+import { PureComponent } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { grayscale } from 'react-syntax-highlighter/dist/styles';
 import { Paper, PaperProps } from 'components';

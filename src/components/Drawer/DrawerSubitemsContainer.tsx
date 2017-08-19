@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { CSSProperties, HTMLProps, PureComponent, PropTypes } from 'react';
+import { CSSProperties, HTMLProps, PureComponent } from 'react';
 import { Icon } from 'components';
 import { DrawerContent } from './DrawerContent';
 import { DrawerItemColor } from 'styles';

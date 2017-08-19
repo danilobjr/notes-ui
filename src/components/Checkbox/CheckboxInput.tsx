@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { HTMLProps, PureComponent, PropTypes } from 'react';
+import { HTMLProps, PureComponent } from 'react';
 import { FontColor } from 'styles';
 
 const componentStyle = {

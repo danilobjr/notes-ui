@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { HTMLProps, MouseEvent, PureComponent, PropTypes } from 'react';
+import { HTMLProps, MouseEvent, PureComponent } from 'react';
 import { CheckboxInput } from './CheckboxInput';
 
 const componentStyle = {

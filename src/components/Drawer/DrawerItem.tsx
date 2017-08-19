@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { PureComponent, PropTypes } from 'react';
+import { PureComponent } from 'react';
 import { DrawerContent, DrawerContentProps } from './DrawerContent';
 import { DrawerItemColor } from 'styles';
 
