@@ -2,7 +2,8 @@
   "name": "react-for-beginners-ui-kit",
   "version": "1.0.0",
   "description": "UI Kit with React.js components specially made for the app built in React for Beginners course on JS Channel, on YouTube.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist/**/*",
     "build": "webpack --env=prod",
