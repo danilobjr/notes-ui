@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SFC } from 'react';
 import { Page, TopicHeader, Paragraph } from 'docs/common';
+import { CustomExample } from './CustomExample';
 import { SimpleExample } from './SimpleExample';
 import { Properties } from './Properties';
 
@@ -13,6 +14,7 @@ export const ModalPage: SFC<any> = () => (
     <TopicHeader>Examples</TopicHeader>
 
     <SimpleExample />
+    <CustomExample />
 
     <TopicHeader>Properties</TopicHeader>
 
