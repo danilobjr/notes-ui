@@ -1,5 +1,7 @@
 # JS Channel React UI Kit
 
+[Live demo](https://danilobjr.github.io/jsc-react-ui/)
+
 ### Installation
 
 `npm install --save jsc-react-ui`
