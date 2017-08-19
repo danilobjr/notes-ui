@@ -1,4 +1,18 @@
-JS Channel React UI Kit
-=======================
+# JS Channel React UI Kit
 
-UI Kit built with React.js components specially made for JS Channel, on YouTube.
+### Installation
+
+`npm install --save jsc-react-ui`
+
+### Usage
+
+```JSX
+import React from 'react'
+import { Button } from 'jsc-reat-ui';
+
+const ButtonExample = () => <Button />;
+```
+
+### License
+
+MIT License © Danilo Barros
