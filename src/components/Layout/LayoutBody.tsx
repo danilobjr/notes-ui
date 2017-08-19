@@ -13,6 +13,7 @@ const componentStyle = {
     height: 'calc(100vh - 64px)',
     top: 64,
     width: 0,
+    overflowY: 'auto',
   },
   drawerOpen: {
     width: 296,
