@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { CSSProperties, PureComponent } from 'react';
-import { Paper, PaperProps, IconButton } from 'components';
-import { BackgroundColor } from 'styles';
+import { Paper, PaperProps, IconButton } from './../';
+import { BackgroundColor } from './../styles';
 
 const componentStyle = {
   base: {

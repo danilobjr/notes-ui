@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as omit from 'lodash.omit';
 import * as Radium from 'radium';
 import { HTMLProps, PureComponent, ReactNode } from 'react';
-import { AppBar, DrawerItem } from 'components';
+import { AppBar, DrawerItem } from './../';
 import { LayoutBody } from './LayoutBody';
 
 const componentStyle = {

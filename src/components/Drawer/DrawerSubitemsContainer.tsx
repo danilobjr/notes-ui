@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { CSSProperties, HTMLProps, PureComponent } from 'react';
-import { Icon } from 'components';
+import { Icon } from './../';
 import { DrawerContent } from './DrawerContent';
-import { DrawerItemColor } from 'styles';
+import { DrawerItemColor } from './../styles';
 
 const componentStyle = {
   base: {

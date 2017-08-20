@@ -3,7 +3,7 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
 import { DrawerContent, DrawerContentProps } from './DrawerContent';
-import { DrawerItemColor } from 'styles';
+import { DrawerItemColor } from './../styles';
 
 const componentStyle = {
   base: {

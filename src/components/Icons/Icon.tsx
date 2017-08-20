@@ -8,7 +8,7 @@ import { IconList } from './IconList';
 import { IconMenu } from './IconMenu';
 import { IconPlus } from './IconPlus';
 import { IconSearch } from './IconSearch';
-import { FontColor } from 'styles';
+import { FontColor } from './../styles';
 
 const icons = {
   expandMore: IconExpandMore,
