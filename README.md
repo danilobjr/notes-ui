@@ -10,7 +10,7 @@
 
 ```JSX
 import React from 'react'
-import { Button } from 'jsc-reat-ui';
+import { Button } from 'jsc-react-ui';
 
 const ButtonExample = () => <Button />;
 ```
