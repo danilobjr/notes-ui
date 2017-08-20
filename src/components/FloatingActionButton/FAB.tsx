@@ -3,8 +3,8 @@ import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import * as Color from 'color';
 import { PureComponent } from 'react';
-import { IconButton, IconButtonProps } from 'components';
-import { elevation, BackgroundColor, FontColor } from 'styles';
+import { IconButton, IconButtonProps } from './../';
+import { elevation, BackgroundColor, FontColor } from './../styles';
 
 const componentStyle = {
   base: {

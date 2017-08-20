@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import { PureComponent } from 'react';
-import { PaperProps } from 'components';
-import { BackgroundColor } from 'styles';
+import { PaperProps } from './../';
+import { BackgroundColor } from './../styles';
 export interface CardProps extends PaperProps {
     color?: BackgroundColor;
     image?: string;

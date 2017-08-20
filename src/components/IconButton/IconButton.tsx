@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
-import { Button, ButtonProps, Icon } from 'components';
+import { Button, ButtonProps, Icon } from './../';
 
 const componentStyle = {
   base: {

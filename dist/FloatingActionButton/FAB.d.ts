@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { PureComponent } from 'react';
-import { IconButtonProps } from 'components';
+import { IconButtonProps } from './../';
 export interface FABProps extends IconButtonProps {
 }
 export declare class FAB extends PureComponent<FABProps, {}> {

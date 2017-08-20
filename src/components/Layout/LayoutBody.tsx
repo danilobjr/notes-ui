@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as omit from 'lodash.omit';
 import * as Radium from 'radium';
 import { CSSProperties, HTMLProps, PureComponent, ReactNode } from 'react';
-import { Drawer, DrawerItem } from 'components';
+import { Drawer, DrawerItem } from './../';
 
 const componentStyle = {
   base: {

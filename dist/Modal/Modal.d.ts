@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { PureComponent } from 'react';
-import { PaperProps } from 'components';
+import { PaperProps } from './../';
 export interface ModalProps extends PaperProps {
     noBackdrop?: boolean;
     open: boolean;

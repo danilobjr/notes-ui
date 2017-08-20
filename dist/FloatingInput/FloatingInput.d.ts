@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { PureComponent, ReactNode } from 'react';
-import { PaperProps } from 'components';
+import { PaperProps } from './../';
 export interface FloatingInputProps extends PaperProps {
     leftElement?: ReactNode;
     placeholder?: string;

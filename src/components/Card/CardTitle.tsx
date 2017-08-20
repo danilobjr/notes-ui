@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent } from 'react';
-import { BackgroundColor, FontColor } from 'styles';
+import { BackgroundColor, FontColor } from './../styles';
 
 const componentStyle = {
   base: {

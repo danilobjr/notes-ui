@@ -1,6 +1,6 @@
 {
   "name": "jsc-react-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "UI Kit with React.js components specially made for the app built in React for Beginners course on JS Channel, on YouTube.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

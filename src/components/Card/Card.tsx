@@ -2,11 +2,11 @@ import * as React from 'react';
 import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
-import { Paper, PaperProps } from 'components';
-import { CardBody } from 'components/Card/CardBody';
-import { CardImage } from 'components/Card/CardImage';
-import { CardTitle } from 'components/Card/CardTitle';
-import { elevation, BackgroundColor, FontColor } from 'styles';
+import { Paper, PaperProps } from './../';
+import { CardBody } from './CardBody';
+import { CardImage } from './CardImage';
+import { CardTitle } from './CardTitle';
+import { elevation, BackgroundColor, FontColor } from './../styles';
 
 const componentStyle = {
   base: {
