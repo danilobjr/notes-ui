@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { HTMLProps, PureComponent } from 'react';
-import { BackgroundColor, FontColor } from 'styles';
+import { BackgroundColor, FontColor } from './../styles';
 export interface CardTitleProps extends HTMLProps<HTMLHeadingElement> {
     bgColor: BackgroundColor;
     fontColor: FontColor;

@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { PureComponent } from 'react';
-import { ButtonProps } from 'components';
+import { ButtonProps } from './../';
 export interface IconButtonProps extends ButtonProps {
     iconName: string;
     iconColor?: string;
