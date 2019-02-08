@@ -1,35 +1,7 @@
 import * as React from 'react';
-import * as Radium from 'radium';
 import * as omit from 'lodash.omit';
-import { CSSProperties, PureComponent } from 'react';
+import { PureComponent } from 'react';
 import { Paper, PaperProps, IconButton } from './../';
-import { BackgroundColor } from './../styles';
-
-const componentStyle = {
-  base: {
-    display: 'flex',
-    width: '100%',
-    minHeight: 64,
-    backgroundColor: BackgroundColor.White,
-    alignItems: 'center',
-    zIndex: 10000,
-  },
-  icon: {
-    marginLeft: 11,
-  },
-  title: {
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 11,
-    fontSize: 24,
-    fontWeight: 400,
-  } as CSSProperties,
-};
-
-const getStyle = (style, props) => ([
-  style.base,
-  props.style,
-]);
 
 export interface AppBarProps extends PaperProps {
   hideToggleDrawerIconButton?: boolean;
@@ -37,8 +9,7 @@ export interface AppBarProps extends PaperProps {
   onToggleDrawerClick?: () => void;
 }
 
-@Radium
-export class AppBar extends PureComponent<AppBarProps, {}> {
+export class AppBar extends PureComponent<AppBarProps> {
   static defaultProps: AppBarProps = {
     onToggleDrawerClick: () => { return; },
   };
@@ -52,10 +23,7 @@ export class AppBar extends PureComponent<AppBarProps, {}> {
     ]);
 
     return (
-      <Paper
-        style={getStyle(componentStyle, this.props)}
-        {...otherProps}
-      >
+      <Paper className="nui-app-bar" {...otherProps}>
         {this.renderToggleDrawerIconButton()}
         {this.renderTitle()}
       </Paper>
@@ -66,7 +34,7 @@ export class AppBar extends PureComponent<AppBarProps, {}> {
     const { title } = this.props;
 
     return title
-      ? <h1 style={componentStyle.title}>{title}</h1>
+      ? <h1 className="title">{title}</h1>
       : null;
   }
 
@@ -79,16 +47,12 @@ export class AppBar extends PureComponent<AppBarProps, {}> {
 
     return (
       <IconButton
-        style={componentStyle.icon}
+        className="icon"
         iconColor={toggleDrawerIconColor}
         iconName="menu"
         flat
-        onClick={this.handleToggleDrawerClick}
+        onClick={this.props.onToggleDrawerClick}
       />
     );
-  }
-
-  handleToggleDrawerClick= () => {
-    this.props.onToggleDrawerClick();
   }
 }
