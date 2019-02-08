@@ -4,13 +4,12 @@ webpack
 .editorconfig
 .gitignore
 .npmignore
-.ternproject
 
 index.html
 index.js
 index.js.map
+package.lock
 todo.md
 tsconfig-base.json
 tslint.json
 webpack.config.js
-yarn.lock
