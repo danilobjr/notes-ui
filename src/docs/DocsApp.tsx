@@ -1,3 +1,5 @@
+import '../styles/_index';
+
 import * as React from 'react';
 import { CSSProperties, PureComponent, ReactNode } from 'react';
 import { AppBar, LayoutBody, DrawerItem } from 'components';
