@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
 import { Paper, PaperProps, IconButton } from './../';
+import { FontColor } from 'components/styles';
 
 export interface AppBarProps extends PaperProps {
   hideToggleDrawerIconButton?: boolean;
@@ -11,48 +12,36 @@ export interface AppBarProps extends PaperProps {
 
 export class AppBar extends PureComponent<AppBarProps> {
   static defaultProps: AppBarProps = {
+    hideToggleDrawerIconButton: false,
+    toggleDrawerIconColor: FontColor.Gray,
     onToggleDrawerClick: () => { return; },
   };
 
   render() {
-    const { ...otherProps } = omit(this.props, [
-      'toggleDrawerIconColor',
-      'hideToggleDrawerIconButton',
-      'style',
-      'onToggleDrawerClick',
-    ]);
+    const {
+      hideToggleDrawerIconButton,
+      toggleDrawerIconColor,
+      onToggleDrawerClick,
+      title,
+      ...otherProps
+    } = omit(this.props, ['style']);
 
     return (
       <Paper className="nui-app-bar" {...otherProps}>
-        {this.renderToggleDrawerIconButton()}
-        {this.renderTitle()}
+        {!hideToggleDrawerIconButton && (
+          <IconButton
+            className="icon"
+            iconColor={toggleDrawerIconColor}
+            iconName="menu"
+            flat
+            onClick={onToggleDrawerClick}
+          />
+        )}
+
+        {!!title && (
+          <h1 className="title">{title}</h1>
+        )}
       </Paper>
-    );
-  }
-
-  renderTitle() {
-    const { title } = this.props;
-
-    return title
-      ? <h1 className="title">{title}</h1>
-      : null;
-  }
-
-  renderToggleDrawerIconButton() {
-    const { hideToggleDrawerIconButton, toggleDrawerIconColor } = this.props;
-
-    if (hideToggleDrawerIconButton) {
-      return null;
-    }
-
-    return (
-      <IconButton
-        className="icon"
-        iconColor={toggleDrawerIconColor}
-        iconName="menu"
-        flat
-        onClick={this.props.onToggleDrawerClick}
-      />
     );
   }
 }
