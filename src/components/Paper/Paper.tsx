@@ -1,22 +1,6 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
-import { omit } from 'lodash';
-import { HTMLProps, PureComponent, SFC } from 'react';
-// import { BackgroundColor, elevation } from './../styles';
-
-// const componentStyle = {
-//   base: {
-//     backgroundColor: BackgroundColor.White,
-//     boxSizing: 'border-box',
-//     overflow: 'hidden',
-//   },
-// };
-
-// const getStyle = (props) => ([
-//   componentStyle.base,
-//   props.elevation && elevation[props.elevation],
-//   props.style,
-// ]);
+import { HTMLProps, SFC } from 'react';
 
 export type Elevation = 0 | 1 | 2 | 3 | 4;
 
@@ -25,11 +9,17 @@ export type PaperProps = {
 } & HTMLProps<HTMLDivElement>;
 
 export const Paper: SFC<PaperProps> = (props) => {
-  const { className, ...otherProps } = omit(props, ['elevation']);
+  const { className, elevation, ...otherProps } = props;
+
+  const elevationClassname = `elevation-${elevation}`;
 
   return (
     <div
-      className={classNames('nui-paper', 'elevation-3')}
+      className={classNames(
+        'nui-paper',
+        { [elevationClassname]: !!elevation },
+        className,
+      )}
       {...otherProps}
     >
       {props.children}
