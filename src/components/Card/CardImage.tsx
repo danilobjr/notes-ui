@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { HTMLProps, PureComponent } from 'react';
 
 const componentStyle = {
@@ -21,13 +20,16 @@ export interface CardImageProps extends HTMLProps<HTMLDivElement> {
   url: string;
 }
 
-@Radium
 export class CardImage extends PureComponent<CardImageProps, {}> {
   render() {
     const { ...otherProps } = omit(this.props, ['style', 'url']);
 
     return (
-      <div style={getStyle(componentStyle, this.props)} {...otherProps}></div>
+      <div
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-card-image"
+        {...otherProps}
+      />
     );
   }
 }

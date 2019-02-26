@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
 import { CSSProperties, HTMLProps, PureComponent, SFC } from 'react';
 import { Example } from 'docs/common';
 import { Button, IconButton, Modal, ModalBody, ModalFooter, ModalHeader, ModalProps } from 'components';
@@ -108,7 +107,6 @@ export interface CustomExampleState {
   modalOpen: boolean;
 }
 
-@Radium
 export class CustomExample extends PureComponent<{}, CustomExampleState> {
   state: CustomExampleState = {
     modalOpen: false,

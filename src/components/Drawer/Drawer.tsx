@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { PureComponent } from 'react';
 import { Paper, PaperProps } from './../';
 
@@ -18,14 +17,14 @@ const getStyle = (style, props) => ([
 
 export interface DrawerProps extends PaperProps {}
 
-@Radium
 export class Drawer extends PureComponent<DrawerProps, {}> {
   render() {
     const { children, ...otherProps } = omit(this.props, ['style']);
 
     return (
       <Paper
-        style={getStyle(componentStyle, this.props)}
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-drawer"
         {...otherProps}
       >
         {children}

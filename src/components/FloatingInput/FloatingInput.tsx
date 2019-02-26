@@ -1,7 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
-import { CSSProperties, PureComponent, ReactNode } from 'react';
+import { PureComponent, ReactNode } from 'react';
 import { Paper, PaperProps } from './../';
 import { elevation, BackgroundColor } from './../styles';
 
@@ -42,7 +40,6 @@ export interface FloatingInputProps extends PaperProps {
   placeholder?: string;
 }
 
-@Radium
 export class FloatingInput extends PureComponent<FloatingInputProps, {}> {
   static defaultProps: FloatingInputProps = {
     placeholder: '',
@@ -60,7 +57,8 @@ export class FloatingInput extends PureComponent<FloatingInputProps, {}> {
         {!!leftElement && leftElement}
 
         <input
-          style={getInputStyle(styleComponent, this.props)}
+          // style={getInputStyle(styleComponent, this.props)}
+          className="nui-floating-input"
           type="text"
           placeholder={placeholder}
         />

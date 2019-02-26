@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { PureComponent } from 'react';
 import { Paper, PaperProps } from './../';
 import { CardBody } from './CardBody';
@@ -22,14 +21,14 @@ export interface CardProps extends PaperProps {
   title?: string;
 }
 
-@Radium
 export class Card extends PureComponent<CardProps, {}> {
   render() {
     const { children, image, style, ...otherProps } = omit(this.props, ['elevation']);
 
     return (
       <Paper
-        style={[componentStyle.base, style]}
+        // style={[componentStyle.base, style]}
+        className="nui-card"
         {...otherProps}
       >
         {!!image && <CardImage url={this.props.image} />}

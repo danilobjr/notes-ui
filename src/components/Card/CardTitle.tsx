@@ -1,6 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent } from 'react';
 import { BackgroundColor, FontColor } from './../styles';
 
@@ -34,7 +32,6 @@ export interface CardTitleProps extends HTMLProps<HTMLHeadingElement> {
   fontColor: FontColor;
 }
 
-@Radium
 export class CardTitle extends PureComponent<CardTitleProps, {}> {
   static defaultProps: CardTitleProps = {
     bgColor: BackgroundColor.White,
@@ -46,7 +43,11 @@ export class CardTitle extends PureComponent<CardTitleProps, {}> {
     const { style, fontColor, bgColor, children, ...others } = this.props;
 
     return (
-      <h2 style={getStyle(componentStyle, this.props)} {...others}>{children}</h2>
+      <h2
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-card-title"
+        {...others}
+      >{children}</h2>
     );
   }
 }

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { PureComponent } from 'react';
 import { DrawerContent, DrawerContentProps } from './DrawerContent';
 import { DrawerItemColor } from './../styles';
@@ -40,7 +39,6 @@ export interface DrawerItemProps extends DrawerContentProps {
   subitem?: boolean;
 }
 
-@Radium
 export class DrawerItem extends PureComponent<DrawerItemProps, {}> {
   render() {
     const { ...otherProps } = omit(this.props, ['style', 'subitem']);
@@ -48,7 +46,8 @@ export class DrawerItem extends PureComponent<DrawerItemProps, {}> {
     return (
       <DrawerContent
         style={getStyle(componentStyle, this.props)}
-        {...otherProps}
+        className="nui-drawer-content"
+        {...otherProps as any}
       />
     );
   }

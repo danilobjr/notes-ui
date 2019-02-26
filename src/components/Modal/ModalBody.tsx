@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
 import { CSSProperties, HTMLProps, PureComponent } from 'react';
 
 const styles = {
@@ -10,13 +9,17 @@ const styles = {
 
 export interface ModalBodyProps extends HTMLProps<HTMLDivElement> {}
 
-@Radium
 export class ModalBody extends PureComponent<ModalBodyProps, {}> {
   render() {
     const { children, style } = this.props;
 
     return (
-      <div style={[styles, style]}>{ children }</div>
+      <div
+        // style={[styles, style]}
+        className="nui-modal-body"
+      >
+        { children }
+      </div>
     );
   }
 }

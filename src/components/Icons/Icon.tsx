@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as omit from 'lodash.omit';
 import { HTMLProps, PureComponent } from 'react';
 import { IconExpandMore } from './IconExpandMore';
 import { IconExpandLess } from './IconExpandLess';

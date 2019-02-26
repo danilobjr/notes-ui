@@ -1,6 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
 import { CSSProperties, PureComponent } from 'react';
 import { Paper, PaperProps } from './../';
 import { BackgroundColor } from './../styles';
@@ -42,7 +40,6 @@ export interface ModalProps extends PaperProps {
   onClose?: () => void;
 }
 
-@Radium
 export class Modal extends PureComponent<ModalProps, {}> {
   static defaultProps: Partial<ModalProps> = {
     noBackdrop: false,
@@ -63,10 +60,11 @@ export class Modal extends PureComponent<ModalProps, {}> {
         </Paper>
 
         <div
-          style={[
-            styles.backdrop,
-            noBackdrop && styles.noBackdrop,
-          ]}
+          // style={[
+          //   styles.backdrop,
+          //   noBackdrop && styles.noBackdrop,
+          // ]}
+          className="nui-modal"
           onClick={onClose}
         />
       </div>

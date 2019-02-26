@@ -1,6 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
 import { PureComponent } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { grayscale } from 'react-syntax-highlighter/dist/styles';
@@ -24,7 +22,6 @@ export interface ExampleState {
   showCode: boolean;
 }
 
-@Radium
 export class Example extends PureComponent<ExampleProps, ExampleState> {
   constructor(props: ExampleProps) {
     super(props);

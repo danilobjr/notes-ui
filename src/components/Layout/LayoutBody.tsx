@@ -1,8 +1,7 @@
 import * as React from 'react';
-import * as omit from 'lodash.omit';
-import * as Radium from 'radium';
+import { omit } from 'lodash';
 import { CSSProperties, HTMLProps, PureComponent, ReactNode } from 'react';
-import { Drawer, DrawerItem } from './../';
+import { Drawer } from './../';
 
 const componentStyle = {
   base: {
@@ -34,7 +33,6 @@ export interface LayoutBodyProps extends HTMLProps<HTMLDivElement> {
   drawerItems: ReactNode | ReactNode[];
 }
 
-@Radium
 export class LayoutBody extends PureComponent<LayoutBodyProps, {}> {
   render() {
     const { drawerItems, children, ...otherProps } = omit(this.props, ['drawerOpen', 'style']);
@@ -44,7 +42,10 @@ export class LayoutBody extends PureComponent<LayoutBodyProps, {}> {
         style={componentStyle.base}
         {...otherProps}
       >
-        <Drawer style={getDrawerStyle(componentStyle, this.props)}>
+        <Drawer
+          // style={getDrawerStyle(componentStyle, this.props)}
+          className="nui-layout-body"
+        >
           {drawerItems}
         </Drawer>
 

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Radium from 'radium';
 import { CSSProperties, PureComponent } from 'react';
 import { FontColor } from 'styles';
 
@@ -10,7 +9,7 @@ const componentStyle = {
   } as CSSProperties,
   name: {
     color: FontColor.Blue,
-  },
+  } as CSSProperties,
   type: {
     color: FontColor.Red,
   },
@@ -26,16 +25,15 @@ export interface PropertyProps {
   type: string;
 }
 
-@Radium
 export class Property extends PureComponent<PropertyProps, {}> {
   render() {
     const { defaultValue, description, name, type } = this.props;
 
     return (
       <tr>
-        <td style={[componentStyle.td, componentStyle.name]}>{name}</td>
-        <td style={[componentStyle.td, componentStyle.type]}>{type}</td>
-        <td style={[componentStyle.td, componentStyle.defaultValue]}>{defaultValue}</td>
+        <td style={{ ...componentStyle.td, ...componentStyle.name }}>{name}</td>
+        <td style={{ ...componentStyle.td, ...componentStyle.type }}>{type}</td>
+        <td style={{ ...componentStyle.td, ...componentStyle.defaultValue }}>{defaultValue}</td>
         <td style={componentStyle.td}>{description}</td>
       </tr>
     );

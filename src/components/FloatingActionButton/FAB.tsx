@@ -1,10 +1,9 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import * as Color from 'color';
 import { PureComponent } from 'react';
 import { IconButton, IconButtonProps } from './../';
-import { elevation, BackgroundColor, FontColor } from './../styles';
+import { BackgroundColor, FontColor } from './../styles';
 
 const componentStyle = {
   base: {
@@ -34,7 +33,6 @@ const getStyle = (style, props) => ([
 
 export interface FABProps extends IconButtonProps {}
 
-@Radium
 export class FAB extends PureComponent<FABProps, {}> {
   static defaultProps: Partial<FABProps> = {
     color: Color(BackgroundColor.Red).darken(.1).rgb().string(),
@@ -46,8 +44,9 @@ export class FAB extends PureComponent<FABProps, {}> {
 
     return (
       <IconButton
-        style={getStyle(componentStyle, this.props)}
-        {...otherProps}
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-icon-button"
+        {...otherProps as any}
       />
     );
   }

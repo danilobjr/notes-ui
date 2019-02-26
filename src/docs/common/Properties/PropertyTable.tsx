@@ -6,7 +6,7 @@ const componentStyle = {
     width: '100%',
     textAlign: 'left',
     borderCollapse: 'collapse',
-  },
+  } as CSSProperties,
   headers: {
     padding: '8px 10px',
     fontWeight: 400,

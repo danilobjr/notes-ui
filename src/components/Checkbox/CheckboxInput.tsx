@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { HTMLProps, PureComponent } from 'react';
 import { FontColor } from './../styles';
 
@@ -47,7 +46,6 @@ const getCheckMarkStyle = (style, props) => ([
 
 export interface CheckboxInputProps extends HTMLProps<HTMLDivElement> { }
 
-@Radium
 export class CheckboxInput extends PureComponent<CheckboxInputProps, {}> {
   static defaultProps: CheckboxInputProps = {
     checked: false,
@@ -58,10 +56,12 @@ export class CheckboxInput extends PureComponent<CheckboxInputProps, {}> {
 
     return (
       <div
-        style={getInputStyle(componentStyle, this.props)}
+        // style={getInputStyle(componentStyle, this.props)}
+        className="nui-checkbox-input"
         {...otherProps}
       >
-        <div style={getCheckMarkStyle(componentStyle, this.props)} />
+        {/* <div style={getCheckMarkStyle(componentStyle, this.props)} /> */}
+        <div className="nui-check-mark" />
       </div>
     );
   }

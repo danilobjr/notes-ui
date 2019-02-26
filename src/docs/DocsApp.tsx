@@ -19,9 +19,9 @@ export interface DocumentationAppState {
   currentPage: any;
 }
 
-export class DocsApp extends PureComponent<{}, DocumentationAppState> {
-  constructor() {
-    super();
+export class DocsApp extends PureComponent<any, DocumentationAppState> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       currentPage: ComponentAppBarPage,

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import * as omit from 'lodash.omit';
-import * as Radium from 'radium';
+import { omit } from 'lodash';
 import { HTMLProps, PureComponent, ReactNode } from 'react';
-import { AppBar, DrawerItem } from './../';
+import { AppBar } from './../';
 import { LayoutBody } from './LayoutBody';
 
 const componentStyle = {
@@ -31,7 +30,6 @@ export interface LayoutState {
   drawerOpen: boolean;
 }
 
-@Radium
 export class Layout extends PureComponent<LayoutProps, LayoutState> {
   static defaultProps: LayoutProps = {
     drawerItems: null,
@@ -52,7 +50,8 @@ export class Layout extends PureComponent<LayoutProps, LayoutState> {
 
     return (
       <div
-        style={getStyle(componentStyle, this.props)}
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-layout"
         {...otherProps}
       >
         <AppBar

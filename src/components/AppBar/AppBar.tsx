@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { PureComponent } from 'react';
 import { Paper, PaperProps, IconButton } from './../';
 import { FontColor } from 'components/styles';

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { HTMLProps, MouseEvent, PureComponent } from 'react';
 import { CheckboxInput } from './CheckboxInput';
 
@@ -28,7 +27,6 @@ export interface CheckboxState {
   checked: boolean;
 }
 
-@Radium
 export class Checkbox extends PureComponent<CheckboxProps, CheckboxState> {
   static defaultProps: CheckboxProps = {
     checked: false,
@@ -52,14 +50,14 @@ export class Checkbox extends PureComponent<CheckboxProps, CheckboxState> {
   }
 
   render() {
-    const { style, children, ...otherProps } = omit(this.props, ['checked', 'onChange']);
+    const { children, ...otherProps } = omit(this.props, ['checked', 'onChange']);
     const { checked } = this.state;
 
     return (
       <div
-        style={[componentStyle.base, style]}
+        className="nui-checkbox"
         onClick={this.handleClick}
-        {...otherProps}
+        {...otherProps as any}
       >
         <CheckboxInput checked={checked} />
 
@@ -68,7 +66,7 @@ export class Checkbox extends PureComponent<CheckboxProps, CheckboxState> {
     );
   }
 
-  handleClick = (e: MouseEvent<HTMLDivElement>) => {
+  private handleClick = (e: MouseEvent<HTMLDivElement>) => {
     const { checked } = this.state;
 
     this.props.onChange(!checked);

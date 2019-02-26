@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { HTMLProps, PureComponent } from 'react';
 import { Icon } from './../';
 
@@ -35,7 +34,6 @@ export interface DrawerContentState {
   open: boolean;
 }
 
-@Radium
 export class DrawerContent extends PureComponent<DrawerContentProps, DrawerContentState> {
   static defatulProps: DrawerContentProps = {
     iconName: '',
@@ -56,7 +54,8 @@ export class DrawerContent extends PureComponent<DrawerContentProps, DrawerConte
 
     return (
       <div
-        style={getStyle(componentStyle, this.props)}
+        // style={getStyle(componentStyle, this.props)}
+        className="nui-drawer-content"
         {...otherProps}
       >
         {!!iconName && (

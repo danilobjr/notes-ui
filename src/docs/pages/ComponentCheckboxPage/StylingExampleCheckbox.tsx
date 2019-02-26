@@ -57,9 +57,9 @@ export interface StylingExampleCheckboxState {
   checked: boolean;
 }
 
-export class StylingExampleCheckbox extends PureComponent<{}, StylingExampleCheckboxState> {
-  constructor() {
-    super();
+export class StylingExampleCheckbox extends PureComponent<any, StylingExampleCheckboxState> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       checked: false,

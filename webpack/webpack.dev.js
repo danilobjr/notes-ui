@@ -16,7 +16,7 @@ module.exports = extend(configBase, {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         options: {
-          configFileName: './../src/docs/tsconfig.json',
+          configFile: './../src/docs/tsconfig.json',
         }
       },
       {

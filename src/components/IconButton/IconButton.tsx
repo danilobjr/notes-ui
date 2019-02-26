@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as Radium from 'radium';
-import * as omit from 'lodash.omit';
+import { omit } from 'lodash';
 import { PureComponent } from 'react';
 import { Button, ButtonProps, Icon } from './../';
 
@@ -26,7 +25,6 @@ export interface IconButtonProps extends ButtonProps {
   iconColor?: string;
 }
 
-@Radium
 export class IconButton extends PureComponent<IconButtonProps, {}> {
   render() {
     const { iconName, iconColor, ...otherProps } = omit(this.props, ['style']);
