@@ -1,60 +1,28 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { PureComponent } from 'react';
+import * as classNames from 'classnames';
+import { SFC } from 'react';
 import { Paper, PaperProps } from './../';
-// import { elevation, BackgroundColor, ButtonColor } from './../styles';
 
-// const componentStyle = {
-//   base: {
-//     display: 'inline-block',
-//     padding: '10px 16px',
-//     backgroundColor: BackgroundColor.White,
-//     borderRadius: '3px',
-//     cursor: 'pointer',
-//     userSelect: 'none',
+export type ButtonProps = {
+  flat?: boolean;
+} & PaperProps;
 
-//     ':hover': elevation['2'],
+export const Button: SFC<ButtonProps> = ({ children, className, flat, ...otherProps }) => (
+  <Paper
+    className={classNames(
+      'nui-button',
+      { flat },
+      className,
+    )}
+    {...otherProps}
+  >
+    {children}
+  </Paper>
+);
 
-//     ':active': {
-//       backgroundColor: ButtonColor.Active,
-//     },
-//   },
-//   flat: {
-//     fontWeight: '300',
-//     backgroundColor: 'transparent',
-//     boxShadow: 'none',
+Button.displayName = 'Button';
 
-//     ':hover': elevation['0'],
-//   },
-// };
-
-// const getStyle = (props) => ([
-//   componentStyle.base,
-//   props.flat && componentStyle.flat,
-//   props.style,
-// ]);
-
-export interface ButtonProps extends PaperProps {
- flat?: boolean;
-}
-
-export class Button extends PureComponent<ButtonProps, {}> {
-  static defaultProps: ButtonProps = {
-    flat: false,
-    children: 'Button',
-  };
-
-  render() {
-    const { children, ...otherProps } = omit(this.props, ['flat', 'style']);
-
-    return (
-      <Paper
-        // style={getStyle(this.props)}
-        className="nui-button"
-        {...otherProps}
-      >
-        {children}
-      </Paper>
-    );
-  }
-}
+Button.defaultProps = {
+  flat: false,
+  children: 'Button',
+};
