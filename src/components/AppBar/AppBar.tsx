@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as classNames from 'classnames';
 import { SFC } from 'react';
 import { Paper, PaperProps, IconButton } from './../';
 import { FontColor } from 'components/styles';
@@ -12,13 +13,14 @@ export type AppBarProps = {
 } & PaperProps;
 
 export const AppBar: SFC<AppBarProps> = ({
+    className,
     hideToggleDrawerIconButton,
     toggleDrawerIconColor,
     onToggleDrawerClick,
     title,
     ...otherProps
   }) => (
-  <Paper className="nui-app-bar" {...otherProps}>
+  <Paper className={classNames('nui-app-bar', className)} {...otherProps}>
     {!hideToggleDrawerIconButton && (
       <IconButton
         className="icon"
@@ -34,6 +36,8 @@ export const AppBar: SFC<AppBarProps> = ({
     )}
   </Paper>
 );
+
+AppBar.displayName = 'AppBar';
 
 AppBar.defaultProps = {
   hideToggleDrawerIconButton: false,
