@@ -11,7 +11,7 @@ export const Button: SFC<ButtonProps> = ({ children, className, flat, ...otherPr
   <Paper
     className={classNames(
       'nui-button',
-      { flat },
+      { '-flat': flat },
       className,
     )}
     {...otherProps}
