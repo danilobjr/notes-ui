@@ -1,68 +1,39 @@
 import * as React from 'react';
-import { PureComponent, ReactNode } from 'react';
+import * as classNames from 'classnames';
+import { ReactNode, SFC } from 'react';
 import { Paper, PaperProps } from './../';
-import { elevation, BackgroundColor } from './../styles';
 
-const styleComponent = {
-  base: {
-    display: 'flex',
-    alignItems: 'center',
-    height: '54px',
-    borderRadius: '27px',
-    borderTop: '1px solid white',
-    backgroundColor: BackgroundColor.White,
-
-    ':focus': elevation['2'],
-  },
-  input: {
-    base: {
-      flex: 1,
-      width: '100%',
-      paddingBottom: '3px',
-      marginRight: '18px',
-      fontWeight: 300,
-      backgroundColor: BackgroundColor.White,
-      border: 'none',
-    },
-    noLeftElement: {
-      marginLeft: '22px',
-    },
-  },
-};
-
-const getInputStyle = (style, props) => ([
-  style.input.base,
-  !props.leftElement && style.input.noLeftElement,
-]);
-
-export interface FloatingInputProps extends PaperProps {
+export type FloatingInputProps = {
   leftElement?: ReactNode;
   placeholder?: string;
-}
+} & PaperProps;
 
-export class FloatingInput extends PureComponent<FloatingInputProps, {}> {
-  static defaultProps: FloatingInputProps = {
-    placeholder: '',
-    leftElement: null,
-  };
+export const FloatingInput: SFC<FloatingInputProps> = ({
+  className,
+  leftElement,
+  placeholder,
+  ...otherProps }) => (
+  <Paper
+    className={classNames(
+      'nui-floating-input',
+      { '-no-icon': !leftElement },
+      className,
+    )}
+    {...otherProps}
+  >
+    {!!leftElement && leftElement}
 
-  render() {
-    const { style, leftElement, placeholder, ...otherProps } = this.props;
+    <input
+      className="input"
+      type="text"
+      placeholder={placeholder}
+    />
+  </Paper>
+);
 
-    return (
-      <Paper
-        style={[styleComponent.base, style]}
-        {...otherProps as any}
-      >
-        {!!leftElement && leftElement}
+FloatingInput.displayName = 'FloatingInput';
 
-        <input
-          // style={getInputStyle(styleComponent, this.props)}
-          className="nui-floating-input"
-          type="text"
-          placeholder={placeholder}
-        />
-      </Paper>
-    );
-  }
-}
+FloatingInput.defaultProps = {
+  placeholder: '',
+  leftElement: null,
+};
