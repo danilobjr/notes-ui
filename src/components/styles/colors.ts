@@ -1,28 +1,28 @@
 export enum FontColor {
-  White = '#f8f8f8',
-  Gray = '#727272',
-  LightGray = '#b8b8b8',
-  Blue = '#3498db',
-  Red = '#c0392b',
+  White = 'white',
+  Gray = 'gray',
+  LightGray = 'lightgray',
+  Blue = 'blue',
+  Red = 'red',
 }
 
 export enum BackgroundColor {
-  Black = '#000',
-  White = '#f8f8f8',
-  Yellow = '#fcdd8d',
-  Pink = '#eea2c8',
-  Red = '#e18e9f',
-  Blue = '#92b3dd',
-  Green = '#80d3d2',
-  Purple = '#c0a7de',
-  Gray = '#727272',
+  Black = 'black',
+  White = 'white',
+  Yellow = 'yellow',
+  Pink = 'pink',
+  Red = 'red',
+  Blue = 'blue',
+  Green = 'green',
+  Purple = 'purple',
+  Gray = 'gray',
 }
 
 export enum ButtonColor {
-  Active = 'rgba(0,0,0,.1)',
+  Active = 'active',
 }
 
 export enum DrawerItemColor {
-  Hover = 'rgba(0,0,0,.05)',
-  Active = 'rgba(0,0,0,.1)',
+  Hover = 'hover',
+  Active = 'active',
 }

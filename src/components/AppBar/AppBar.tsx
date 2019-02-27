@@ -7,7 +7,7 @@ import { FontColor } from 'components/styles';
 export type AppBarProps = {
   // TODO: rename this to hideToggleDrawerButton
   hideToggleDrawerIconButton?: boolean;
-  toggleDrawerIconColor?: string;
+  toggleDrawerIconColor?: FontColor;
   // TODO: rename: onClickToggleDrawerButton
   onToggleDrawerClick?: () => void;
 } & PaperProps;
@@ -18,8 +18,7 @@ export const AppBar: SFC<AppBarProps> = ({
     toggleDrawerIconColor,
     onToggleDrawerClick,
     title,
-    ...otherProps
-  }) => (
+    ...otherProps }) => (
   <Paper className={classNames('nui-app-bar', className)} {...otherProps}>
     {!hideToggleDrawerIconButton && (
       <IconButton
