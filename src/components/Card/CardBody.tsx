@@ -1,18 +1,16 @@
 import * as React from 'react';
+import * as classNames from 'classnames';
 import { HTMLProps, SFC } from 'react';
 
-const componentStyle = {
-  base: {
-    padding: '22px',
-    color: '#727272',
-    fontWeight: 300,
-  },
-};
+export type CardBodyProps = HTMLProps<HTMLDivElement>;
 
-export interface CardBodyProps extends HTMLProps<HTMLDivElement> {}
-
-export const CardBody: SFC<CardBodyProps> = ({children, ...otherProps}) => (
-  <div style={componentStyle.base} {...otherProps as any}>{children}</div>
+export const CardBody: SFC<CardBodyProps> = ({ children, className, ...otherProps }) => (
+  <div
+    className={classNames('nui-card-body', className)}
+    {...otherProps}
+  >
+    {children}
+  </div>
 );
 
 CardBody.displayName = 'CardBody';

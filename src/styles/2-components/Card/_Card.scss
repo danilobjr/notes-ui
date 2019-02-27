@@ -1,0 +1,7 @@
+.nui-card {
+  border-radius: 4px;
+
+  &:hover {
+    @extend %elevation-2;
+  }
+}

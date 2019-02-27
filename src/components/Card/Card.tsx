@@ -1,52 +1,47 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { PureComponent } from 'react';
+import * as classNames from 'classnames';
+import { SFC } from 'react';
 import { Paper, PaperProps } from './../';
 import { CardBody } from './CardBody';
 import { CardImage } from './CardImage';
 import { CardTitle } from './CardTitle';
-import { elevation, BackgroundColor, FontColor } from './../styles';
+import { BackgroundColor, FontColor } from './../styles';
 
-const componentStyle = {
-  base: {
-    borderRadius: '4px',
-
-    ':hover': elevation['2'],
-  },
-};
-
-export interface CardProps extends PaperProps {
+export type CardProps = {
   color?: BackgroundColor;
   image?: string;
   title?: string;
-}
+} & PaperProps;
 
-export class Card extends PureComponent<CardProps, {}> {
-  render() {
-    const { children, image, style, ...otherProps } = omit(this.props, ['elevation']);
+export const Card: SFC<CardProps> = ({
+  children,
+  className,
+  image,
+  ...otherProps }) => (
+  <Paper
+    className={classNames('nui-card', className)}
+    {...otherProps}
+  >
+    {!!image && <CardImage url={this.props.image} />}
+    {renderTitle(otherProps)}
+    <CardBody>{children}</CardBody>
+  </Paper>
+);
 
-    return (
-      <Paper
-        // style={[componentStyle.base, style]}
-        className="nui-card"
-        {...otherProps}
-      >
-        {!!image && <CardImage url={this.props.image} />}
-        {this.renderTitle()}
-        <CardBody>{children}</CardBody>
-      </Paper>
-    );
+Card.displayName = 'Card';
+
+Card.defaultProps = {
+  color: BackgroundColor.White,
+  image: '',
+  title: '',
+};
+
+const renderTitle = ({ title, color }: CardProps) => {
+  if (!title) {
+    return null;
   }
 
-  renderTitle() {
-    const { title, color } = this.props;
+  const fontColor: FontColor = !!color ? FontColor.White : FontColor.Gray;
 
-    if (!title) {
-      return null;
-    }
-
-    const fontColor = color ? FontColor.White : FontColor.Gray;
-
-    return <CardTitle fontColor={fontColor} bgColor={color}>{title}</CardTitle>;
-  }
-}
+  return <CardTitle fontColor={fontColor} bgColor={color}>{title}</CardTitle>;
+};

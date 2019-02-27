@@ -1,35 +1,19 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { HTMLProps, PureComponent } from 'react';
+import { HTMLProps, SFC } from 'react';
 
-const componentStyle = {
-  base: {
-    height: '195px',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    filter: 'brightness(.9)',
-  },
-};
-
-const getStyle = (style, props) => ([
-  style.base,
-  { backgroundImage: `url(${props.url})` },
-]);
-
-export interface CardImageProps extends HTMLProps<HTMLDivElement> {
+export type CardImageProps = {
   url: string;
-}
+} & HTMLProps<HTMLDivElement>;
 
-export class CardImage extends PureComponent<CardImageProps, {}> {
-  render() {
-    const { ...otherProps } = omit(this.props, ['style', 'url']);
+export const CardImage: SFC<CardImageProps> = ({ style, url, ...otherProps }) => (
+  <div
+    className="nui-card-image"
+    style={{
+      backgroundImage: `url(${url})`,
+      ...style,
+    }}
+    {...otherProps}
+  />
+);
 
-    return (
-      <div
-        // style={getStyle(componentStyle, this.props)}
-        className="nui-card-image"
-        {...otherProps}
-      />
-    );
-  }
-}
+CardImage.displayName = 'CardImage';

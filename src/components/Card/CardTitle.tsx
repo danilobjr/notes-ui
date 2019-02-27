@@ -1,53 +1,36 @@
 import * as React from 'react';
-import { HTMLProps, PureComponent } from 'react';
+import * as classNames from 'classnames';
+import { HTMLProps, SFC } from 'react';
 import { BackgroundColor, FontColor } from './../styles';
 
-const componentStyle = {
-  base: {
-    paddingTop: 22,
-    paddingRight: 22,
-    paddingBottom: 22,
-    paddingLeft: 22,
-    margin: 0,
-    fontSize: '22px',
-    fontWeight: 400,
-    lineHeight: '22px',
-  },
-  noPaddingBottom: {
-    paddingBottom: 0,
-  },
+export type CardTitleProps = {
+  bgColor?: BackgroundColor;
+  fontColor?: FontColor;
+} & HTMLProps<HTMLHeadingElement>;
+
+export const CardTitle: SFC<CardTitleProps> = ({
+  bgColor,
+  children,
+  className,
+  fontColor,
+  ...otherProps }) => (
+  <h2
+    className={classNames(
+      'nui-card-title',
+      `font-${fontColor}`,
+      `bg-${bgColor}`,
+      { 'no-padding-bottom': bgColor === 'white' },
+      className,
+    )}
+    {...otherProps}
+  >
+    {children}
+  </h2>
+);
+
+CardTitle.displayName = 'CardTitle';
+
+CardTitle.defaultProps = {
+  bgColor: BackgroundColor.White,
+  fontColor: FontColor.White,
 };
-
-const getStyle = (style, props) => ([
-  style.base,
-  props.bgColor === BackgroundColor.White && style.noPaddingBottom,
-  {
-    color: props.fontColor,
-    backgroundColor: props.bgColor,
-  },
-]);
-
-export interface CardTitleProps extends HTMLProps<HTMLHeadingElement> {
-  bgColor: BackgroundColor;
-  fontColor: FontColor;
-}
-
-export class CardTitle extends PureComponent<CardTitleProps, {}> {
-  static defaultProps: CardTitleProps = {
-    bgColor: BackgroundColor.White,
-    children: 'Title',
-    fontColor: FontColor.White,
-  };
-
-  render() {
-    const { style, fontColor, bgColor, children, ...others } = this.props;
-
-    return (
-      <h2
-        // style={getStyle(componentStyle, this.props)}
-        className="nui-card-title"
-        {...others}
-      >{children}</h2>
-    );
-  }
-}
