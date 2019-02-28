@@ -11,12 +11,13 @@ export type PaperProps = {
 export const Paper: SFC<PaperProps> = (props) => {
   const { className, elevation, ...otherProps } = props;
 
-  const elevationClassname = `elevation-${elevation}`;
+  const elevationClassname = `_elevation-${elevation}`;
 
   return (
     <div
       className={classNames(
         'nui-paper',
+        // Remove this. Use sass extension instead
         { [elevationClassname]: !!elevation },
         className,
       )}
