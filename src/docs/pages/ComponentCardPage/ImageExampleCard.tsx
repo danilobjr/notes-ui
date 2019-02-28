@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CSSProperties, SFC } from 'react';
 import { Example } from 'docs/common';
-import { Card } from 'components';
+import { Card, CardTitle, CardImage, CardBody } from 'components';
 
 const componentStyle = {
   base: {
@@ -36,14 +36,14 @@ export const ImageExampleCard: SFC<any> = () => (
     description={description}
     code={code}
   >
-    <Card
-      style={componentStyle.base}
-      title="Restaurant"
-      image="http://proural.info.opt-images.1c-bitrix-cdn.ru/upload/iblock/66c/66c21eb3acb6b59e85bb022d330f38a6.jpg?1497597442216529"
-    >
-      Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
-            ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
-        </Card>
+    <Card style={componentStyle.base}>
+      <CardImage url="http://proural.info.opt-images.1c-bitrix-cdn.ru/upload/iblock/66c/66c21eb3acb6b59e85bb022d330f38a6.jpg?1497597442216529" />
+      <CardTitle>Restaurant</CardTitle>
+      <CardBody>
+        Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
+        ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
+      </CardBody>
+    </Card>
   </Example>
 );
 

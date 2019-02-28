@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SFC } from 'react';
 import { Example } from 'docs/common';
-import { Card } from 'components';
+import { Card, CardTitle, CardBody } from 'components';
 
 const description = 'You can pass content to the Card using the ' +
   '<code class="inline">title</code> property and something between the tags.';
@@ -22,9 +22,12 @@ export const TitleAndContentExampleCard: SFC<any> = () => (
     description={description}
     code={code}
   >
-    <Card title="Thoughts">
-      Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
-      ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
+    <Card>
+      <CardTitle>Thoughts</CardTitle>
+      <CardBody>
+        Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
+        ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
+      </CardBody>
     </Card>
   </Example>
 );

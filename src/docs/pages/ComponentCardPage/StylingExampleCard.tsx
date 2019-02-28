@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { SFC } from 'react';
 import { Example } from 'docs/common';
-import { Card } from 'components';
+import { Card, CardTitle, CardBody } from 'components';
+import { BackgroundColor, FontColor } from 'components/styles';
 
 const componentStyle = {
   base: {
@@ -31,13 +32,17 @@ export const StylingExampleCard: SFC<any> = () => (
     description={description}
     code={code}
   >
-    <Card
-      style={componentStyle.base}
-      title="Thoughts"
-      color={'#3498db' as any}
-    >
-      Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
-      ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
+    <Card style={componentStyle.base}>
+      <CardTitle
+        fontColor={FontColor.White}
+        bgColor={BackgroundColor.Blue}
+      >
+        Thoughts
+      </CardTitle>
+      <CardBody>
+        Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
+        ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
+      </CardBody>
     </Card>
   </Example>
 );
