@@ -17,9 +17,9 @@ export const CardTitle: SFC<CardTitleProps> = ({
   <h2
     className={classNames(
       'nui-card-title',
-      `font-${fontColor}`,
-      `bg-${bgColor}`,
-      { 'no-padding-bottom': bgColor === 'white' },
+      `_font-${fontColor}`,
+      `_bg-${bgColor}`,
+      { '_no-padding-bottom': bgColor === 'white' },
       className,
     )}
     {...otherProps}
@@ -32,5 +32,5 @@ CardTitle.displayName = 'CardTitle';
 
 CardTitle.defaultProps = {
   bgColor: BackgroundColor.White,
-  fontColor: FontColor.White,
+  fontColor: FontColor.Gray,
 };
