@@ -1,0 +1,9 @@
+.nui-checkbox {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

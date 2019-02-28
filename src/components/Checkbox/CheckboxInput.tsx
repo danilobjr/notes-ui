@@ -56,11 +56,9 @@ export class CheckboxInput extends PureComponent<CheckboxInputProps, {}> {
 
     return (
       <div
-        // style={getInputStyle(componentStyle, this.props)}
         className="nui-checkbox-input"
         {...otherProps}
       >
-        {/* <div style={getCheckMarkStyle(componentStyle, this.props)} /> */}
         <div className="nui-check-mark" />
       </div>
     );

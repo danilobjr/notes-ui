@@ -1,39 +1,22 @@
 import * as React from 'react';
+import * as classNames from 'classnames';
 import { omit } from 'lodash';
 import { HTMLProps, MouseEvent, PureComponent } from 'react';
 import { CheckboxInput } from './CheckboxInput';
 
-const componentStyle = {
-  base: {
-    display: 'flex',
-    alignItems: 'center',
-    userSelect: 'none',
-
-    ':hover': {
-      cursor: 'pointer',
-    },
-  },
-};
-
-export interface PropsTransformer extends HTMLProps<HTMLDivElement> {
-  onChange?: any;
-}
-
-export interface CheckboxProps extends PropsTransformer {
+export type CheckboxProps = {
   onChange?: (checked: boolean) => void;
-}
+} & HTMLProps<HTMLDivElement>;
 
-export interface CheckboxState {
+export type CheckboxState = {
   checked: boolean;
-}
+};
 
 export class Checkbox extends PureComponent<CheckboxProps, CheckboxState> {
   static defaultProps: CheckboxProps = {
     checked: false,
     onChange: () => { return; },
   };
-
-  state: CheckboxState;
 
   constructor(props: CheckboxProps) {
     super(props);
@@ -50,14 +33,14 @@ export class Checkbox extends PureComponent<CheckboxProps, CheckboxState> {
   }
 
   render() {
-    const { children, ...otherProps } = omit(this.props, ['checked', 'onChange']);
+    const { children, className, ...otherProps } = omit(this.props, ['checked', 'onChange']);
     const { checked } = this.state;
 
     return (
       <div
-        className="nui-checkbox"
+        className={classNames('nui-checkbox', className)}
         onClick={this.handleClick}
-        {...otherProps as any}
+        {...otherProps}
       >
         <CheckboxInput checked={checked} />
 
