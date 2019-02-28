@@ -1,0 +1,26 @@
+.nui-checkbox-input {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+
+  &.-checked {
+    background-color: #f0f0f0;
+
+    > .check-mark {
+      display: block;
+      border: 2px solid $font-color-lightgray;
+      border-top: none;
+      border-right: none;
+      width: 13px;
+      height: 5px;
+      transform-origin: 0px 100% 0px;
+      transform: rotateZ(-45deg) translate(-1px, 14px);
+    }
+  }
+
+  .check-mark {
+    display: none;
+  }
+}
