@@ -1,0 +1,29 @@
+.nui-drawer-item {
+  display: flex;
+  flex: 1;
+  height: 54px;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+
+  &:hover {
+    background-color: $drawer-item-color-hover;
+  }
+
+  &:active {
+    background-color: $drawer-item-color-active;
+  }
+
+  &.-subitem {
+    padding-left: 20px;
+  }
+
+  > svg {
+    margin-left: 25px;
+  }
+
+  > .text {
+    flex: 1;
+    margin-left: 25px;
+  }
+}

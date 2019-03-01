@@ -1,47 +1,18 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { CSSProperties, HTMLProps, PureComponent } from 'react';
+import * as classNames from 'classnames';
+import { HTMLProps, PureComponent } from 'react';
 import { Icon } from './../';
-import { DrawerContent } from './DrawerContent';
-import { DrawerItemColor } from './../styles';
+import { DrawerItem } from './DrawerItem';
 
-const componentStyle = {
-  base: {
-    cursor: 'pointer',
-    userSelect: 'none',
-  },
-  rootItem: {
-    display: 'flex',
-    alignItems: 'center',
-
-    ':hover': {
-      backgroundColor: DrawerItemColor.Hover,
-    },
-
-    ':active': {
-      backgroundColor: DrawerItemColor.Active,
-    },
-  } as CSSProperties,
-  expandIcon: {
-    width: 16,
-    margin: '0 18px',
-  },
-};
-
-const getStyle = (style, props) => ([
-  style.base,
-  props.style,
-]);
-
-export interface DrawerSubitemsContainerProps extends HTMLProps<HTMLDivElement> {
+export type DrawerSubitemsContainerProps = {
   expanded?: boolean;
   iconName?: string;
   text?: string;
-}
+} & HTMLProps<HTMLDivElement>;
 
-export interface DrawerSubitemsContainerState {
+export type DrawerSubitemsContainerState = {
   expanded: boolean;
-}
+};
 
 export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContainerProps, DrawerSubitemsContainerState> {
   static defaultProps: DrawerSubitemsContainerProps = {
@@ -59,25 +30,20 @@ export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContain
   }
 
   render() {
-    const { children, iconName, text, ...otherProps } = omit(this.props, ['expanded', 'style']);
-    const { expanded } = this.state;
+    const { children, className, expanded, iconName, text, ...otherProps } = this.props;
 
     return (
       <div
-        // style={getStyle(componentStyle, this.props)}
-        className="nui-drawer-subitem-container"
+        className={classNames('nui-drawer-subitem-container', className)}
         {...otherProps}
       >
-        <div
-          style={componentStyle.rootItem}
-          onClick={this.handleClick}
-        >
-          <DrawerContent iconName={iconName} text={text} />
+        <div className="content" onClick={this.handleClick}>
+          <DrawerItem iconName={iconName} text={text} />
 
           {this.renderExpandSubitemContainerIcons()}
         </div>
 
-        {expanded && children}
+        {!!this.state.expanded && children}
       </div>
     );
   }
@@ -91,10 +57,10 @@ export class DrawerSubitemsContainer extends PureComponent<DrawerSubitemsContain
     }
 
     if (expanded) {
-      return <Icon style={componentStyle.expandIcon} name="expandLess" />;
+      return <Icon name="expandLess" />;
     }
 
-    return <Icon style={componentStyle.expandIcon} name="expandMore" />;
+    return <Icon name="expandMore" />;
   }
 
   handleClick = () => {

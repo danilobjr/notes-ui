@@ -1,34 +1,17 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { PureComponent } from 'react';
+import * as classNames from 'classnames';
+import { SFC } from 'react';
 import { Paper, PaperProps } from './../';
 
-const componentStyle = {
-  base: {
-    width: 296,
-    height: '100vh',
-  },
-};
+export type DrawerProps = PaperProps;
 
-const getStyle = (style, props) => ([
-  style.base,
-  props.style,
-]);
+export const Drawer: SFC<DrawerProps> = ({ children, className, ...otherProps }) => (
+  <Paper
+    className={classNames('nui-drawer', className)}
+    {...otherProps}
+  >
+    {children}
+  </Paper>
+);
 
-export interface DrawerProps extends PaperProps {}
-
-export class Drawer extends PureComponent<DrawerProps, {}> {
-  render() {
-    const { children, ...otherProps } = omit(this.props, ['style']);
-
-    return (
-      <Paper
-        // style={getStyle(componentStyle, this.props)}
-        className="nui-drawer"
-        {...otherProps}
-      >
-        {children}
-      </Paper>
-    );
-  }
-}
+Drawer.displayName = 'Drawer';

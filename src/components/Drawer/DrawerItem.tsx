@@ -1,54 +1,39 @@
 import * as React from 'react';
-import { omit } from 'lodash';
-import { PureComponent } from 'react';
-import { DrawerContent, DrawerContentProps } from './DrawerContent';
-import { DrawerItemColor } from './../styles';
+import * as classNames from 'classnames';
+import { HTMLProps, PureComponent } from 'react';
+import { Icon } from './../';
 
-const componentStyle = {
-  base: {
-    display: 'flex',
-    cursor: 'pointer',
-    userSelect: 'none',
-    alignItems: 'center',
-
-    ':hover': {
-      backgroundColor: DrawerItemColor.Hover,
-    },
-
-    ':active': {
-      backgroundColor: DrawerItemColor.Active,
-    },
-  },
-  active: {
-    backgroundColor: DrawerItemColor.Active,
-  },
-  subitem: {
-    paddingLeft: 20,
-  },
-};
-
-const getStyle = (style, props) => ([
-  style.base,
-  props.subitem && style.subitem,
-  props.style,
-]);
-
-export interface DrawerItemProps extends DrawerContentProps {
+export type DrawerItemProps = {
   iconName?: string;
-  text: string;
   subitem?: boolean;
-}
+  text?: string;
+} & HTMLProps<HTMLDivElement>;
 
-export class DrawerItem extends PureComponent<DrawerItemProps, {}> {
+export class DrawerItem extends PureComponent<DrawerItemProps> {
+  static defatulProps: DrawerItemProps = {
+    iconName: '',
+    subitem: false,
+    text: '',
+  };
+
   render() {
-    const { ...otherProps } = omit(this.props, ['style', 'subitem']);
+    const { className, iconName, subitem, text, ...otherProps } = this.props;
 
     return (
-      <DrawerContent
-        style={getStyle(componentStyle, this.props)}
-        className="nui-drawer-content"
-        {...otherProps as any}
-      />
+      <div
+        className={classNames(
+          'nui-drawer-item',
+          { '-subitem': subitem },
+          className,
+        )}
+        {...otherProps}
+      >
+        {!!iconName && (
+          <Icon name={iconName} />
+        )}
+
+        <span className="text">{text}</span>
+      </div>
     );
   }
 }
