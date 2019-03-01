@@ -1,13 +1,14 @@
 import * as React from 'react';
+import * as classNames from 'classnames';
 import { HTMLProps, SFC } from 'react';
 
 export type CardImageProps = {
   url: string;
 } & HTMLProps<HTMLDivElement>;
 
-export const CardImage: SFC<CardImageProps> = ({ style, url, ...otherProps }) => (
+export const CardImage: SFC<CardImageProps> = ({ className, style, url, ...otherProps }) => (
   <div
-    className="nui-card-image"
+    className={classNames('nui-card-image', className)}
     style={{
       backgroundImage: `url(${url})`,
       ...style,
