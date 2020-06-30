@@ -1,6 +1,6 @@
 # JS Channel React UI Kit
 
-[Live demo](https://danilobjr.github.io/jsc-react-ui/)
+[Live demo](https://danilobjr.github.io/notes-ui/)
 
 ### Installation
 
