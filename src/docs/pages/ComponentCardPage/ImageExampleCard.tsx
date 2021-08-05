@@ -23,7 +23,7 @@ const CardExample = () => (
   <Card
     style={style}
     title="Restaurant"
-    image="http://proural.info.opt-images.1c-bitrix-cdn.ru/upload/iblock/66c/66c21eb3acb6b59e85bb022d330f38a6.jpg?1497597442216529"
+    image="https://www.viajali.com.br/wp-content/uploads/2018/08/restaurantes-fortaleza-17.jpg"
   >
     Sed tempus, odio nec laoreet pulvinar, erat elit tristique dolor,
     ut sollicitudin ex nunc vel eros. Sed magna erat, condimentum.
