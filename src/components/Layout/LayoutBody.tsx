@@ -5,9 +5,10 @@ import { CSSProperties, HTMLProps, PureComponent, ReactNode } from 'react';
 import { Drawer, DrawerItem } from './../';
 
 const componentStyle = {
-  base: {
-    display: 'flex',
+  base: {    
     width: '100%',
+    overflowY: 'auto',
+    display: 'flex',
   },
   drawer: {
     height: 'calc(100vh - 64px)',
